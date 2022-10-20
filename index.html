@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Link Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@100;300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;600&family=Roboto:wght@100;300;400;500&family=Source+Code+Pro:wght@400;600&family=Source+Serif+Pro:wght@400;600&family=Ubuntu:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <!-- Icono de Pestaña -->
+  <link rel="icon" href="assets/img/logo.png" />
+  <!-- Titulo de Pestaña -->
+  <title>West Celular</title>
+</head>
+
+<body>
+  <!-- Intro -->
+  <div class="intro">
+    <img src="assets/img/logo.png" alt="Logo de West Celular" />
+    <h1 class="logo">
+      <span class="logo-parts">W</span>
+      <span class="logo-parts">E</span>
+      <span class="logo-parts">S</span>
+      <span class="logo-parts">T</span>
+      <span class="logo-parts">&nbsp;&nbsp;</span>
+      <span class="logo-parts">C</span>
+      <span class="logo-parts">E</span>
+      <span class="logo-parts">L</span>
+      <span class="logo-parts">U</span>
+      <span class="logo-parts">L</span>
+      <span class="logo-parts">A</span>
+      <span class="logo-parts">R</span>
+    </h1>
+
+    <!-- Intro Cargando -->
+    <div class="lds">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <header>
+    <!-- Partículas del Fondo-->
+    <div id="particles-js"></div>
+
+    <!-- Titulo -->
+    <div class="titulo">
+      <b>We<span>st</span> Cel<span>ul</span>ar</b>
+    </div>
+
+    <!-- Logo -->
+    <div id="nube"></div>
+    <div id="eclipse">
+      <img src="assets/img/logo.png" alt="Logo de West Celular" />
+    </div>
+
+    <!-- Menu -->
+    <nav>
+      <div class="nav-content">
+        <div class="toggle-btn">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <span style="--i: 1">
+          <a href="#"><i class="fa-solid fa-house-chimney"></i></a>
+        </span>
+        <span style="--i: 2">
+          <a href="#servicio"><i class="fa-solid fa-hands-holding-child"></i></a>
+        </span>
+        <span style="--i: 3">
+          <a href="assets/pages/celulares.html"><i class="fa-solid fa-mobile"></i></a>
+        </span>
+        <span style="--i: 4">
+          <a href="#repair"><i class="fa-solid fa-screwdriver-wrench"></i></a>
+        </span>
+        <span style="--i: 5">
+          <a href="assets/pages/contacto.html"><i class="fa-solid fa-envelope"></i></a>
+        </span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección de Galería -->
+    <section class="contenedor">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/img/gl/1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/gl/2.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/gl/3.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/gl/4.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/gl/5.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/gl/6.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!--Nuestros Servicios-->
+    <section class="contenedor" id="servicio" data-aos="zoom-in-up" data-aos-duration="1000">
+      <h2 class="subtitulo">Nuestros servicios</h2>
+      <div class="contenedor-servicio">
+        <img src="assets/img/service.svg" alt="Ilustración" />
+        <div class="presentation-servicio">
+          <div class="service">
+            <h3 class="n-service">
+              <span class="lista">1</span>¿Quienes somos?
+            </h3>
+            <p class="p">
+              Somos una distribuidora integral de productos importados
+              tecnológicos. Equipos originales, nuevos, libres, sellados y con
+              garantía escrita.
+            </p>
+          </div>
+
+          <div class="service">
+            <h3 class="n-service"><span class="lista">2</span>Envíos.</h3>
+            <p class="p">
+              Envíos en el día a domicilio o puntos de entrega. RECIBÍS,
+              PROBAS y ABONAS.
+            </p>
+          </div>
+
+          <div class="service">
+            <h3 class="n-service">
+              <span class="lista">3</span>Procesamiento de pagos.
+            </h3>
+            <p class="p">
+              Abonas en pesos/U$S en mano o transferencia. NO trabajamos con
+              tarjeta, NO damos a pagar, NO se cobra por adelantado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Servicio Técnico-->
+    <section id="repair" class="contenedor" data-aos="zoom-in-up" data-aos-duration="1000">
+      <h2 class="subtitulo">Servicio Técnico</h2>
+      <div class="contenedor-servicio">
+        <img src="assets/img/repair.svg" alt="Ilustración de una reparación de un celular" />
+        <div class="presentation-servicio">
+          <div class="service">
+            <h3 class="n-service">
+              <span class="lista"><i class="fa-sharp fa-solid fa-caret-right"></i></span>Mantenimiento
+            </h3>
+            <p>
+              Te ofrecemos atención personalizada, solo con turnos, horarios a
+              coordinar. Presupuesto y revision sin cargo!
+            </p>
+          </div>
+
+          <div class="service">
+            <h3 class="n-service">
+              <span class="lista"><i class="fa-sharp fa-solid fa-caret-right"></i></span>Celulares y tablets.
+            </h3>
+            <p>
+              Servicio a todas las marcar. Samsung - LG - Motorola - Huawei -
+              Xiaomi - Iphone - Realme
+            </p>
+          </div>
+
+          <div class="service">
+            <h3 class="n-service">
+              <span class="lista"><i class="fa-sharp fa-solid fa-caret-right"></i></span>Hardware.
+            </h3>
+            <ul>
+              <li>Cambio de Pantallas / Módulos / Display.</li>
+              <li>Cambio del Lcd.</li>
+              <li>Cambio de Táctil / Touchscreen.</li>
+              <li>Cambio de Baterías internas.</li>
+              <li>
+                Cambio de Flex (carga, encendido, inicio, proximidad, entre
+                otros).
+              </li>
+              <li>Cambio de Cámaras (frontales y traseras).</li>
+              <li>Reparación bandeja porta sim.</li>
+              <li>Reparación de Lectores de huellas</li>
+              <li>Reparación de Micrófonos y Parlantes.</li>
+              <li>Reparación de Pines de carga.</li>
+              <li>Reparación de Teléfonos mojados.</li>
+              <li>Reparación de botones.</li>
+            </ul>
+          </div>
+
+          <div class="service">
+            <h3 class="n-service">
+              <span class="lista"><i class="fa-sharp fa-solid fa-caret-right"></i></span>Software.
+            </h3>
+            <ul>
+              <li>Reinstalación de Sistema operativo.</li>
+              <li>Desbloqueos en banda negativa.</li>
+              <li>No se reciben equipos bloqueados por Enacom</li>
+              <li>
+                Adulteración y/o modificaciones de IMEI. - Información
+                Adicional: Liberación y desbloqueo de tu teléfono celular
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="contenedor" data-aos="zoom-in-up" data-aos-duration="1000">
+      <h2 class="title">Preguntas Frecuentes</h2>
+      <div class="faq-content">
+        <div class="faq-container first">
+          <div class="faq-collapsible">
+            <h3 class="question">¿Lorem ipsum dolor sit amet.?</h3>
+            <div class="arrow-container">
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+              sequi veniam praesentium nisi incidunt odio porro doloremque
+              sapiente mollitia illo.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-collapsible">
+            <h3 class="question">
+              ¿Lorem ipsum dolor, sit amet consectetur adipisicing.?
+            </h3>
+            <div class="arrow-container">
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Ratione recusandae amet sed nobis ipsam, quisquam a consectetur
+              dignissimos nihil ipsa?
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-collapsible">
+            <h3 class="question">
+              ¿Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores, in!?
+            </h3>
+            <div class="arrow-container">
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, nisi. Magnam architecto consequuntur dicta neque
+              repudiandae dolores asperiores beatae autem!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/img/logo.png" alt="Logo de West Celular en pie de pagina" class="logof" />
+    <div class="social">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/westcelulares2019" target="_blank"><i class="fa fa-facebook"
+              aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://wa.me/541133860181?text=Hola,%20estoy%20interesado%20en%20comprar%20un%20celular"
+            target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/westcelular2019" target="_blank"><i class="fa fa-instagram"
+              aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="mailto:smansilla085@gmail.com?subject=West-Celular"><i class="fa fa-google-plus"
+              aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-location-dot" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </div>
+    <span class="copyright">&copy;2022, West Celular. Reservados todos los derechos.</span>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Pantalla de carga -->
+  <script src="assets/js/intro.js"></script>
+  <!-- Partículas del fondo -->
+  <script src="assets/js/particles.min.js"></script>
+  <script src="assets/js/fondo.js"></script>
+  <!-- Menu Flotante -->
+  <script src="assets/js/menu.js"></script>
+  <!-- Preguntas y Respuestas -->
+  <script src="assets/js/pregfreg.js"></script>
+  <!-- Icons Font Awesome -->
+  <script src="https://kit.fontawesome.com/bc21839583.js" crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- Galería -->
+  <script src="assets/js/galeria.js"></script>
+  <!-- AOS JS  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
