@@ -132,6 +132,3 @@ document.querySelector(".filter-clear").addEventListener("click", (e) => {
     .querySelectorAll(".filter-active")
     .forEach((item) => item.classList.remove("filter-active"));
 });
-
-//Contador de elementos activos
-//Funcionamiento del botón clear

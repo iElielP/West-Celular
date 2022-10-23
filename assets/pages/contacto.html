@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
   <!-- Estilos CSS -->
   <link rel="stylesheet" href="../../style.css" />
   <!-- Tipografías -->
@@ -20,30 +23,38 @@
 </head>
 
 <body>
-  <header>
-    <!-- Partículas del Fondo-->
-    <div id="particles-js"></div>
-    <!-- Titulo -->
-    <div class="titulo">
-      <b>We<span>st</span> Cel<span>ul</span>ar</b>
-    </div>
-    <!-- Logo -->
-    <div id="nube"></div>
-    <div id="eclipse">
-      <img src="../img/logo.png" alt="Logo de West Celular" />
+  <!-- Partículas del Fondo-->
+  <div id="particles-js" class="position-fixed"></div>
+  <header class="container-fluid text-center header">
+    <div class="row align-items-center">
+      <!-- Logo -->
+      <div class="col-1">
+        <div id="eclipse">
+          <img src="../img/logo.png" alt="Logo de West Celular" />
+        </div>
+      </div>
+      <!-- Titulo -->
+      <div class="col-10">
+        <div class="titulo">
+          <b>We<span>st</span> Cel<span>ul</span>ar</b>
+        </div>
+      </div>
     </div>
     <!-- Menu -->
-    <nav>
-      <div class="nav-content">
+    <nav class="d-flex align-items-center justify-content-center position-fixed">
+      <div class="nav-content d-flex align-items-center justify-content-center">
         <div class="toggle-btn">
           <i class="fa-solid fa-plus"></i>
         </div>
+
         <span style="--i: 3">
           <a href="../../index.html"><i class="fa-solid fa-house-chimney"></i></a>
         </span>
+
         <span style="--i: 4">
           <a href="celulares.html"><i class="fa-solid fa-mobile"></i></a>
         </span>
+
         <span style="--i: 5">
           <a href="#"><i class="fa-solid fa-envelope"></i></a>
         </span>
@@ -52,103 +63,118 @@
   </header>
   <main>
     <!--Formulario para contactarnos-->
-    <section class="contenedor">
+    <section class="container-xxl container-md contenedor">
       <h2 class="subtitulo">Complete el formulario</h2>
-      <form action="" method="post" id="contact_user_grupoamsi" class="form-contact" autocomplete="off"
-        accept-charset="utf-8">
-        <div class="ctn-inputs">
-          <label for="contact_name_user_grupoamsi" class="support-text-form-contact">
-            Nombre (Requerido)
-          </label>
+      <div class="row">
+        <img class="col-lg-4" src="../img/contact.svg" alt="Ilustración de una reparación de un celular" />
+        <div class="col-lg-8">
+          <form action="" method="post" id="contact_user_grupoamsi" class="form-contact" autocomplete="off"
+            accept-charset="utf-8">
+            <div class="ctn-inputs">
+              <label for="contact_name_user_grupoamsi" class="support-text-form-contact">
+                Nombre (Requerido)
+              </label>
 
-          <input type="text" name="contact_name_user_grupoamsi" id="contact_name_user_grupoamsi"
-            pattern="[a-zA-Z]{2,100}" class="effect-input" minlength="2" maxlength="100" autocomplete="off"
-            required="required" />
-          <span class="bar-input-effect">
-            <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
-          </span>
-          <p id="field-names" class="error-input-form-contact"></p>
+              <input type="text" name="contact_name_user_grupoamsi" id="contact_name_user_grupoamsi"
+                pattern="[a-zA-Z]{2,100}" class="effect-input" minlength="2" maxlength="100" autocomplete="off"
+                required="required" />
+              <span class="bar-input-effect">
+                <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
+              </span>
+              <p id="field-names" class="error-input-form-contact"></p>
+            </div>
+
+            <div class="ctn-inputs">
+              <label for="contact_email_user_grupoamsi" class="support-text-form-contact">
+                Email (Requerido)
+              </label>
+
+              <input type="email" name="contact_email_user_grupoamsi" id="contact_email_user_grupoamsi"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="effect-input" minlength="6" maxlength="92"
+                autocomplete="off" required="required" />
+              <span class="bar-input-effect">
+                <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
+              </span>
+              <p id="field-email" class="error-input-form-contact"></p>
+            </div>
+
+            <div class="ctn-inputs ctn-middle">
+              <label for="contact_tel_user_grupoamsi" class="support-text-form-contact">
+                Teléfono (Optativo)
+              </label>
+
+              <input type="tel" name="contact_tel_user_grupoamsi" id="contact_tel_user_grupoamsi" pattern="[0-9]{7,11}"
+                class="inline-block effect-input" min="2000000" max="3500000000" minlength="7" maxlength="11"
+                autocomplete="off" />
+              <span class="bar-input-effect">
+                <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
+              </span>
+              <p id="field-tel" class="error-input-form-contact"></p>
+            </div>
+
+            <div class="ctn-inputs">
+              <label for="contact_comments_user_grupoamsi" class="support-text-form-contact">
+                Mensaje (Requerido)
+              </label>
+
+              <textarea name="contact_comments_user_grupoamsi" id="contact_comments_user_grupoamsi"
+                pattern="[a-zA-Z0-9]{50,400}" class="effect-input" minlength="50" maxlength="400" autocomplete="off"
+                required="required"></textarea>
+              <span class="bar-input-effect">
+                <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
+              </span>
+              <p id="field-comments" class="error-input-form-contact"></p>
+            </div>
+
+            <div class="ctn-btns-form-contact">
+              <input type="reset" id="clear_contact_user_grupoamsi" name="clear_contact_user_grupoamsi"
+                class="btn-form-contact" value="Limpiar" />
+
+              <input type="submit" id="send_contact_user_grupoamsi" name="send_contact_user_grupoamsi"
+                class="btn-form-contact" value="Enviar" />
+            </div>
+          </form>
         </div>
-
-        <div class="ctn-inputs">
-          <label for="contact_email_user_grupoamsi" class="support-text-form-contact">
-            Email (Requerido)
-          </label>
-
-          <input type="email" name="contact_email_user_grupoamsi" id="contact_email_user_grupoamsi"
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="effect-input" minlength="6" maxlength="92"
-            autocomplete="off" required="required" />
-          <span class="bar-input-effect">
-            <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
-          </span>
-          <p id="field-email" class="error-input-form-contact"></p>
-        </div>
-
-        <div class="ctn-inputs ctn-middle">
-          <label for="contact_tel_user_grupoamsi" class="support-text-form-contact">
-            Teléfono (Opcional)
-          </label>
-
-          <input type="tel" name="contact_tel_user_grupoamsi" id="contact_tel_user_grupoamsi" pattern="[0-9]{7,11}"
-            class="inline-block effect-input" min="2000000" max="3500000000" minlength="7" maxlength="11"
-            autocomplete="off" />
-          <span class="bar-input-effect">
-            <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
-          </span>
-          <p id="field-tel" class="error-input-form-contact"></p>
-        </div>
-
-        <div class="ctn-inputs">
-          <label for="contact_comments_user_grupoamsi" class="support-text-form-contact">
-            Mensaje (Requerido)
-          </label>
-
-          <textarea name="contact_comments_user_grupoamsi" id="contact_comments_user_grupoamsi"
-            pattern="[a-zA-Z0-9]{50,400}" class="effect-input" minlength="50" maxlength="400" autocomplete="off"
-            required="required"></textarea>
-          <span class="bar-input-effect">
-            <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
-          </span>
-          <p id="field-comments" class="error-input-form-contact"></p>
-        </div>
-
-        <div class="ctn-btns-form-contact">
-          <input type="reset" id="clear_contact_user_grupoamsi" name="clear_contact_user_grupoamsi"
-            class="btn-form-contact" value="Limpiar" />
-
-          <input type="submit" id="send_contact_user_grupoamsi" name="send_contact_user_grupoamsi"
-            class="btn-form-contact" value="Enviar" />
-        </div>
-      </form>
+      </div>
     </section>
   </main>
+  <!-- Footer Pie de Pagina -->
+  <footer class="container-fluid text-center footer">
+    <div class="row-cols-1 align-items-center">
+      <img src="../img/logo.png" alt="Logo de West Celular en pie de pagina" class="logof" />
 
-  <footer>
-    <img src="../img/logo.png" alt="Logo de West Celular en pie de pagina" class="logof" />
-    <div class="social">
-      <ul>
-        <li>
-          <a href="https://www.facebook.com/westcelulares2019" target="_blank"><i class="fa fa-facebook"
-              aria-hidden="true"></i></a>
-        </li>
-        <li>
-          <a href="https://wa.me/541133860181?text=Hola,%20estoy%20interesado%20en%20comprar%20un%20celular"
-            target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/westcelular2019" target="_blank"><i class="fa fa-instagram"
-              aria-hidden="true"></i></a>
-        </li>
-        <li>
-          <a href="mailto:smansilla085@gmail.com?subject=West-Celular"><i class="fa fa-google-plus"
-              aria-hidden="true"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa fa-location-dot" aria-hidden="true"></i></a>
-        </li>
-      </ul>
+      <div class="d-flex justify-content-center social">
+        <ul class="d-flex list-unstyled">
+          <li>
+            <a href="https://www.facebook.com/westcelulares2019" target="_blank"><i class="fa fa-facebook"
+                aria-hidden="true"></i></a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/541133860181?text=Hola,%20estoy%20interesado%20en%20comprar%20un%20celular"
+              target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/westcelular2019" target="_blank"><i class="fa fa-instagram"
+                aria-hidden="true"></i></a>
+          </li>
+
+          <li>
+            <a href="mailto:smansilla085@gmail.com?subject=West-Celular"><i class="fa fa-google-plus"
+                aria-hidden="true"></i></a>
+          </li>
+
+          <li>
+            <a href="#"><i class="fa fa-location-dot" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <span class="copyright">
+        &copy;2022, West Celular. Reservados todos los derechos.
+      </span>
     </div>
-    <span class="copyright">&copy;2022, West Celular. Reservados todos los derechos.</span>
   </footer>
 
   <!-- Scripts -->
@@ -163,6 +189,10 @@
   <script src="../js/contacto.js"></script>
   <!-- Icons Font Awesome -->
   <script src="https://kit.fontawesome.com/bc21839583.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
