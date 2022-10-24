@@ -63,7 +63,7 @@ html {
 .intro img {
   height: 40%;
   width: 40%;
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 .logo {
@@ -265,8 +265,8 @@ html {
 }
 
 .titulo b {
+  font-size: 3rem;
   font-family: "Source Code Pro";
-  font-size: 55px;
   color: var(--wh);
   text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em var(--pk), 0 0 0.5em var(--pk),
     0 0 0.1em var(--pk), 0 10px 3px var(--bl);
@@ -397,7 +397,7 @@ nav.open .nav-content span {
 }
 
 /*---------->ESTILOS DE LA GALERÍA<---------*/
-.swiper {
+.sw {
   width: 75%;
   border-radius: 10px;
 }
@@ -409,11 +409,11 @@ nav.open .nav-content span {
 /*---------->ESTILOS DE NUESTROS SERVICIOS<---------*/
 .subtitulo {
   color: var(--lighbl);
-  font-size: 50px;
   text-align: center;
   margin-bottom: 3rem;
-  font-family: "Cormorant Garamond";
-  font-weight: 700;
+  font-family: "Playfair Display";
+  font-weight: 500;
+  font-size: 2.5rem
 }
 
 .service {
@@ -425,7 +425,7 @@ nav.open .nav-content span {
   color: var(--lighbl);
   font-family: "Roboto Condensed";
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.5rem
 }
 
 .lista {
@@ -475,7 +475,7 @@ nav.open .nav-content span {
 }
 
 .question {
-  font-size: 25px;
+  font-size: 1.5rem;
   font-weight: 400;
   color: var(--wh);
   font-family: "Roboto Condensed";
@@ -868,9 +868,10 @@ textarea {
 }
 
 /*---------->ESTILOS DE NUEVOS INGRESOS<---------*/
-.swiper-container {
+.sw-cont {
   padding-bottom: 80px;
   margin: 5% auto 7rem;
+  
 }
 
 .card {
@@ -954,7 +955,7 @@ textarea {
 }
 
 .fa-magnifying-glass,
-.input-box .b-close{
+.input-box .b-close {
   position: absolute;
   top: 50%;
   font-size: 20px;
@@ -1036,11 +1037,12 @@ textarea {
   padding: 0.25em;
 }
 
-.m-close{
+.m-close {
   background-color: transparent;
   color: var(--lighbl);
   border: none;
 }
+
 .m-close:hover {
   color: var(--pk);
 }
@@ -1055,9 +1057,10 @@ textarea {
 
 /*---------->ESTILOS DEL MODAL<---------*/
 
-.fondo{
+.fondo {
   background-color: #fff;
 }
+
 .mi-modal {
   color: var(--wh);
   background: var(--mf);
@@ -1142,6 +1145,7 @@ textarea {
 .cerrar:focus {
   background-color: #9E2A2B;
 }
+
 /*---------->ESTILOS DEL LOS CARDS<---------*/
 .products {
   padding: 5rem;
@@ -1253,7 +1257,7 @@ textarea {
 @media screen and (max-width: 991px) {
 
   /* Galería */
-  .swiper {
+  .sw {
     width: 100%;
   }
 
@@ -1272,10 +1276,15 @@ textarea {
     width: 100px;
     height: 100px;
   }
+
   #eclipse:before,
   #eclipse:after {
-  width: 100px;
-  height: 100px;
-  transform-origin: 60px 60px;
-}
+    width: 100px;
+    height: 100px;
+    transform-origin: 60px 60px;
+  }
+
+  .titulo b {
+    font-size: 1.5rem;
+  }
 }
