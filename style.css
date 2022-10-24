@@ -30,7 +30,6 @@ font-family: 'Ubuntu', sans-serif; */
   --lighbl: #49b6ff;
   --wh2: #edf6f9;
   --gr: #afafaf;
-  --swiper-theme-color: #d81159;
   --bl2: #11151c;
   --mf: #2d2d2df5;
   --cf: #f8f9fa;
@@ -406,6 +405,10 @@ nav.open .nav-content span {
   width: 100%;
 }
 
+.sw-cl{
+  color: var(--pk);
+}
+
 /*---------->ESTILOS DE NUESTROS SERVICIOS<---------*/
 .subtitulo {
   color: var(--lighbl);
@@ -465,7 +468,7 @@ nav.open .nav-content span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
+  padding: 10px 20px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -493,8 +496,8 @@ nav.open .nav-content span {
 }
 
 .faq-answer p {
-  padding: 10px 40px;
-  font-size: 15px;
+  padding: 10px 30px;
+  font-size: 1rem;
   font-family: "Inter";
   font-weight: 300;
 }
@@ -1285,6 +1288,16 @@ textarea {
   }
 
   .titulo b {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .subtitulo{
+    font-size: 2rem;
+  }
+  .question{
+    font-size: 1rem;
+  }
+  .faq-answer p{
+    font-size: 0.8rem;
   }
 }
