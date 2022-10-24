@@ -166,7 +166,6 @@ html {
 }
 
 /*---------->ESTILOS DEL LA BARRA DE PROGRESO<----------*/
-
 .progress-cont {
   position: fixed;
   background-color: transparent;
@@ -183,17 +182,21 @@ html {
 }
 
 /*---------->ESTILOS DEL LOGO<---------*/
+.header {
+  padding: 0;
+  margin: 0;
+}
+
 #eclipse {
   width: 150px;
   height: 150px;
-  margin-top: 15px;
+  margin: 15px;
   background-color: var(--bl);
   border-radius: 50%;
 }
 
 #eclipse img {
-  height: 82%;
-  width: 82%;
+  width: 80%;
   object-fit: contain;
 }
 
@@ -258,12 +261,14 @@ html {
 .titulo {
   width: fit-content;
   margin: 0 auto;
+  margin-top: 1rem;
   padding: 10px 30px;
   background-color: var(--bl);
   border-radius: 50px;
 }
 
-.titulo b {
+.titulo b,
+.titulo-f b {
   font-size: 3rem;
   font-family: "Source Code Pro";
   color: var(--wh);
@@ -271,11 +276,13 @@ html {
     0 0 0.1em var(--pk), 0 10px 3px var(--bl);
 }
 
-.titulo b span {
+.titulo b span,
+.titulo-f b span {
   animation: blink linear infinite 2s;
 }
 
-.titulo b span:nth-of-type(2) {
+.titulo b span:nth-of-type(2),
+.titulo-f b span:nth-of-type(2) {
   animation: blink linear infinite 3s;
 }
 
@@ -321,11 +328,9 @@ html {
 
 /*---------->ESTILOS DEL MENU<---------*/
 nav {
-  top: 20px;
+  top: 150px;
   right: 0;
   width: 80px;
-  height: 300px;
-  cursor: grab;
   z-index: 2;
 }
 
@@ -405,7 +410,7 @@ nav.open .nav-content span {
   width: 100%;
 }
 
-.sw-cl{
+.sw-cl {
   color: var(--pk);
 }
 
@@ -527,7 +532,7 @@ footer {
 
 .logof {
   width: 150px;
-  margin: 1rem;
+  margin-top: 5rem;
 }
 
 .copyright {
@@ -538,26 +543,33 @@ footer {
 }
 
 /*---------->ESTILOS DEL FOOTER REDES SOCIALES<---------*/
-.social ul {
+.social {
+  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
+.social ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .social ul li {
-  margin: 0 20px;
+  margin: 0px 20px;
 }
 
 .social ul li a .fa {
   font-size: 20px;
   color: #555;
-  line-height: 40px;
+  line-height: 30px;
   transition: 0.5s;
 }
 
 .social ul li a {
   position: relative;
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: #fff;
   text-align: center;
   transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
@@ -670,6 +682,7 @@ form {
 
 textarea::-webkit-scrollbar {
   width: 5px;
+  display: block;
 }
 
 textarea::-webkit-scrollbar-thumb {
@@ -874,7 +887,7 @@ textarea {
 .sw-cont {
   padding-bottom: 80px;
   margin: 5% auto 7rem;
-  
+
 }
 
 .card {
@@ -1070,6 +1083,7 @@ textarea {
   border-radius: 10px;
 }
 
+
 .modal-section>* {
   padding: 0.55em 1.5rem;
 }
@@ -1106,16 +1120,6 @@ textarea {
   overflow: auto;
   border-radius: inherit;
   z-index: 1;
-}
-
-.modal__scroll-area::-webkit-scrollbar {
-  width: 6px;
-}
-
-.modal__scroll-area::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1) inset,
-    0 -1px 0 rgba(0, 0, 0, 0.1) inset;
 }
 
 .m-btn {
@@ -1291,13 +1295,35 @@ textarea {
     font-size: 2rem;
   }
 
-  .subtitulo{
+  .subtitulo {
     font-size: 2rem;
   }
-  .question{
+
+  .n-service {
+    font-size: 1.2rem;
+  }
+
+  .service p {
+    font-size: 0.8rem;
+  }
+
+  .service ul li {
+    font-size: 0.8rem;
+  }
+
+  .question {
     font-size: 1rem;
   }
-  .faq-answer p{
+
+  .faq-answer p {
     font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .sw-n,
+  .sw-p {
+    visibility: hidden;
   }
 }

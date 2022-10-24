@@ -56,28 +56,18 @@
   <!-- Partículas del Fondo-->
   <div id="particles-js" class="position-fixed"></div>
 
-  <header class="container-fluid text-center header">
-    <div class="row align-items-center">
-      <!-- Scroll Bar Progress -->
-      <div class="progress progress-cont">
-        <div class="progress-bar progress-bar-striped progress-bar-animated prog-bar" id="progressBar"
-          role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
-          aria-valuemax="100"></div>
-      </div>
-
-      <!-- Logo -->
-      <div class="col-12">
-        <div id="eclipse" class="d-flex align-items-center justify-content-center">
-          <img src="assets/img/logo.png" alt="Logo de West Celular" />
-        </div>
-      </div>
-      <!-- Titulo -->
-      <div class="col-12">
-        <div class="titulo">
-          <b>We<span>st</span> Cel<span>ul</span>ar</b>
-        </div>
-      </div>
+  <header>
+    <!-- Scroll Bar Progress -->
+    <div class="progress progress-cont">
+      <div class="progress-bar progress-bar-striped progress-bar-animated prog-bar" id="progressBar" role="progressbar"
+        aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
+
+    <!-- Logo -->
+    <div id="eclipse" class="d-flex align-items-center justify-content-center">
+      <img src="assets/img/logo.png" alt="Logo de West Celular" />
+    </div>
+
     <!-- Menu -->
     <nav class="d-flex align-items-center justify-content-center position-fixed">
       <div class="nav-content d-flex align-items-center justify-content-center">
@@ -128,8 +118,8 @@
           </div>
         </div>
 
-        <div class="swiper-button-next sw-cl"></div>
-        <div class="swiper-button-prev sw-cl"></div>
+        <div class="swiper-button-next sw-cl sw-n"></div>
+        <div class="swiper-button-prev sw-cl sw-p"></div>
         <div class="swiper-pagination sw-cl"></div>
       </div>
     </section>
@@ -295,12 +285,17 @@
     </section>
   </main>
   <!-- Footer Pie de Pagina -->
-  <footer class="container-fluid text-center footer">
-    <div class="row-cols-1 align-items-center">
+  <footer class="container-fluid footer">
+    <div class="row-cols-1 text-center">
       <img src="assets/img/logo.png" alt="Logo de West Celular en pie de pagina" class="logof" />
-
+      <div class=" ">
+        <div class="titulo-f">
+          <b class="fs-5">We<span>st</span> Cel<span>ul</span>ar</b>
+        </div>
+      </div>
+      <!-- Redes Sociales -->
       <div class="d-flex justify-content-center social">
-        <ul class="d-flex list-unstyled">
+        <ul class="d-flex">
           <li>
             <a href="https://www.facebook.com/westcelulares2019" target="_blank"><i class="fa fa-facebook"
                 aria-hidden="true"></i></a>
@@ -340,7 +335,7 @@
           <div class="modal-body">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26236.6074352276!2d-58.77534253105412!3d-34.71587459899609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bceb28d8421f0b%3A0xe570f35f998e946a!2sKarina!5e0!3m2!1ses-419!2sar!4v1666573568032!5m2!1ses-419!2sar"
-              width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="modal-footer">
