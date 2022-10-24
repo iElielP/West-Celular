@@ -133,10 +133,10 @@
       <span class="icon-search d-flex position-absolute justify-content-center">
         <i class="fa-solid fa-magnifying-glass filter-act"></i>
       </span>
-      <i class="fa-solid fa-xmark" onclick="activar"></i>
+      <i class="fa-solid fa-xmark b-close" onclick="activar"></i>
     </div>
     <!-- Filtro -->
-    <div class="cel-cont" data-modal-state="closed">
+    <div class="cel-cont">
       <input type="checkbox" class="filter-input" checked id="xiaomi" />
       <input type="checkbox" class="filter-input" checked id="motorola" />
       <input type="checkbox" class="filter-input" checked id="samsung" />
@@ -146,7 +146,7 @@
       <input type="checkbox" class="filter-input" checked id="256" />
 
       <div class="filter d-flex">
-        <button type="button" data-open-modal="modal-filter" class="filter__button">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="filter__button">
           Filtro <i class="fa-sharp fa-solid fa-filter"></i>
         </button>
         <div class="filter__current-filters">
@@ -154,19 +154,19 @@
           <span class="filter__current-filter filter-xiaomi filter-active">
             Xiaomi
             <label for="xiaomi">
-              <i class="fa-solid fa-xmark"></i>
+              <i class="fa-solid fa-xmark m-close"></i>
             </label>
           </span>
           <span class="filter__current-filter filter-motorola filter-active">
             Motorola
             <label for="motorola">
-              <i class="fa-solid fa-xmark"></i>
+              <i class="fa-solid fa-xmark m-close"></i>
             </label>
           </span>
           <span class="filter__current-filter filter-samsung filter-active">
             Samsung
             <label for="samsung">
-              <i class="fa-solid fa-xmark"></i>
+              <i class="fa-solid fa-xmark m-close"></i>
             </label>
           </span>
         </div>
@@ -295,35 +295,40 @@
         </div>
       </section>
 
-      <div data-close-modal class="overlay"></div>
+
       <!-- Modal de Filtros -->
-      <div id="modal-filter" class="modal-wrapper d-flex">
-        <div class="modal-filtro d-flex flex-column position-relative m-auto">
-          <div class="modal__scroll-area position-relative">
-            <section class="modal__filter-section">
-              <h2 class="modal__filter-section-title">
-                Categoría <i class="fa-solid fa-filter"></i>
-              </h2>
-              <!-- Marca -->
-              <h3 class="sub">Marcas</h3>
-              <label for="xiaomi" class="modal__filter-label filter-xiaomi filter-active">Xiaomi</label>
-              <label for="motorola" class="modal__filter-label filter-motorola filter-active">Motorola</label>
-              <label for="samsung" class="modal__filter-label filter-samsung filter-active">Samsung</label>
-              <!-- Memoria de Almacenamiento -->
-              <h3 class="sub">Almacenamiento</h3>
-              <label for="32" class="modal__filter-label filter-32 filter-active">32GB</label>
-              <label for="64" class="modal__filter-label filter-64 filter-active">64GB</label>
-              <label for="128" class="modal__filter-label filter-128 filter-active">128GB</label>
-              <label for="256" class="modal__filter-label filter-256 filter-active">256GB</label>
-            </section>
-          </div>
-          <div class="d-flex justify-content-sm-around">
-            <button class="m-btn limpiar filter-clear" type="button">
-              Limpiar
-            </button>
-            <button class="m-btn aplicar" type="button" data-close-modal>
-              Aplicar filtros
-            </button>
+      <div class="modal fade text-start" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content mi-modal">
+            <div class="modal-header">
+              <h1 class="modal-title fs-3" id="exampleModalLabel">Categoría <i class="fa-solid fa-filter"></i></h1>
+              <button type="button" class="fa-solid fa-xmark m-close fs-3" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+            <div class=" modal__scroll-area">
+              <section class="modal-section">
+                <!-- Marca -->
+                <h2 class="fs-4">Marcas</h2>
+                <label for="xiaomi" class="modal__filter-label filter-xiaomi filter-active">Xiaomi</label>
+                <label for="motorola" class="modal__filter-label filter-motorola filter-active">Motorola</label>
+                <label for="samsung" class="modal__filter-label filter-samsung filter-active">Samsung</label>
+                <!-- Memoria de Almacenamiento -->
+                <h2 class="sub fs-4">Almacenamiento</h2>
+                <label for="32" class="modal__filter-label filter-32 filter-active">32GB</label>
+                <label for="64" class="modal__filter-label filter-64 filter-active">64GB</label>
+                <label for="128" class="modal__filter-label filter-128 filter-active">128GB</label>
+                <label for="256" class="modal__filter-label filter-256 filter-active">256GB</label>
+              </section>
+            </div>
+            <div class="modal-footer">
+              <button class="m-btn limpiar filter-clear" type="button">
+                Limpiar
+              </button>
+              <button class="m-btn aplicar" type="button" data-bs-dismiss="modal" aria-label="Close">
+                Aplicar filtros
+              </button>
+            </div>
           </div>
         </div>
       </div>

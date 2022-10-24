@@ -46,23 +46,8 @@ html {
   scroll-padding-top: 10%;
 }
 
-/*---------->ESTILOS DEL SCROLL BAR<----------*/
-html::-webkit-scrollbar-track {
-  background-color: var(--wh);
-}
-
-html::-webkit-scrollbar {
-  width: 10px;
-  background-color: var(--wh);
-}
-
-html::-webkit-scrollbar-thumb {
-  background-image:
-    -webkit-gradient(linear, left bottom, left top,
-      color-stop(0.44, rgb(73, 182, 255)),
-      color-stop(0.72, rgb(119, 200, 255)),
-      color-stop(0.86, rgb(164, 219, 255)));
-  border-radius: 10px;
+::-webkit-scrollbar {
+  display: none;
 }
 
 /*---------->ESTILOS DE LA INTRO<----------*/
@@ -181,6 +166,23 @@ html::-webkit-scrollbar-thumb {
   z-index: -2;
 }
 
+/*---------->ESTILOS DEL LA BARRA DE PROGRESO<----------*/
+
+.progress-cont {
+  position: fixed;
+  background-color: transparent;
+  top: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.prog-bar {
+  position: fixed;
+  background-color: var(--lighbl);
+  height: 10px;
+  width: 0%;
+}
+
 /*---------->ESTILOS DEL LOGO<---------*/
 #eclipse {
   width: 150px;
@@ -194,7 +196,6 @@ html::-webkit-scrollbar-thumb {
   height: 82%;
   width: 82%;
   object-fit: contain;
-  margin-top: 20px;
 }
 
 #eclipse:before,
@@ -257,9 +258,8 @@ html::-webkit-scrollbar-thumb {
 /*---------->ESTILOS DEL TITULO<---------*/
 .titulo {
   width: fit-content;
-  margin: 30px auto;
+  margin: 0 auto;
   padding: 10px 30px;
-  /* word-break: break-all; */
   background-color: var(--bl);
   border-radius: 50px;
 }
@@ -954,7 +954,7 @@ textarea {
 }
 
 .fa-magnifying-glass,
-.input-box .fa-xmark {
+.input-box .b-close{
   position: absolute;
   top: 50%;
   font-size: 20px;
@@ -970,7 +970,7 @@ textarea {
   transform: translateY(-50%) rotate(0);
 }
 
-.input-box .fa-xmark {
+.input-box .b-close {
   right: 15px;
   color: var(--lighbl);
   padding: 5px;
@@ -979,12 +979,12 @@ textarea {
   transform: translateY(-50%);
 }
 
-.input-box .fa-xmark:hover {
+.input-box .b-close:hover {
   cursor: pointer;
   color: var(--pk);
 }
 
-.input-box.open .fa-xmark {
+.input-box.open .b-close {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(-50%) rotate(180deg);
@@ -1036,8 +1036,12 @@ textarea {
   padding: 0.25em;
 }
 
-.fa-xmark:hover {
-  cursor: pointer;
+.m-close{
+  background-color: transparent;
+  color: var(--lighbl);
+  border: none;
+}
+.m-close:hover {
   color: var(--pk);
 }
 
@@ -1050,42 +1054,21 @@ textarea {
 }
 
 /*---------->ESTILOS DEL MODAL<---------*/
-.modal-wrapper,
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-}
 
-.modal-wrapper {
-  opacity: 0;
-  pointer-events: none;
+.fondo{
+  background-color: #fff;
 }
-
-.modal-wrapper.active {
-  opacity: 1;
-}
-
-.modal-wrapper.active .modal-filtro {
-  pointer-events: auto;
-}
-
-.modal-filtro {
+.mi-modal {
   color: var(--wh);
   background: var(--mf);
-  max-height: 400px;
-  max-width: 400px;;
   border-radius: 10px;
 }
 
-.modal__filter-section>* {
+.modal-section>* {
   padding: 0.55em 1.5rem;
 }
 
-.modal__filter-section-title {
+.modal-section-title {
   margin: 0;
 }
 
@@ -1110,11 +1093,6 @@ textarea {
 
 .modal__filter-label.filter-active::before {
   background-image: url('data:image/svg+xml;utf-8,        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">          <path fill="none" vector-effect="non-scaling-stroke" stroke="%23fff" stroke-width="2" d="M5 65 L35 95 L95 30"/>        </svg>');
-}
-
-.overlay {
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 150ms ease;
 }
 
 .modal__scroll-area {
@@ -1160,38 +1138,10 @@ textarea {
   background-color: #b7b406;
 }
 
-
-[data-modal-state=closed] .overlay {
-  pointer-events: none;
+.cerrar:hover,
+.cerrar:focus {
+  background-color: #9E2A2B;
 }
-
-[data-modal-state=closed] .overlay,
-[data-modal-state=closed] .modal {
-  opacity: 0;
-}
-
-[data-modal-state=opening] .modal-wrapper.active .modal>*,
-[data-modal-state=closing] .modal-wrapper.active .modal>* {
-  opacity: 0;
-}
-
-[data-modal-state=opening] .overlay {
-  transition: opacity 500ms ease;
-}
-
-[data-modal-state=closing] .overlay {
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-
-[data-modal-state=open] .modal-wrapper.active .modal>* {
-  transition: opacity 450ms;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
 /*---------->ESTILOS DEL LOS CARDS<---------*/
 .products {
   padding: 5rem;
@@ -1315,4 +1265,17 @@ textarea {
   .form-contact .ctn-middle {
     width: 60%;
   }
+}
+
+@media screen and (max-width: 767px) {
+  #eclipse {
+    width: 100px;
+    height: 100px;
+  }
+  #eclipse:before,
+  #eclipse:after {
+  width: 100px;
+  height: 100px;
+  transform-origin: 60px 60px;
+}
 }
