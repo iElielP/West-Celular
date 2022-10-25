@@ -32,7 +32,7 @@ font-family: 'Ubuntu', sans-serif; */
   --gr: #afafaf;
   --bl2: #11151c;
   --mf: #2d2d2df5;
-  --cf: #f8f9fa;
+  --cf: #3789BF;
 }
 
 body {
@@ -176,9 +176,9 @@ html {
 
 .prog-bar {
   position: fixed;
-  background-color: var(--lighbl);
+  background: rgb(27,68,96);
+  background: linear-gradient(100deg, rgba(27,68,96,1) 15%, rgba(73,182,255,1) 70%, rgba(187,228,255,1) 95%);
   height: 10px;
-  width: 0%;
 }
 
 /*---------->ESTILOS DEL LOGO<---------*/
@@ -512,7 +512,7 @@ nav.open .nav-content span {
   transform: translateY(0);
 }
 
-.fa-chevron-down {
+.icon-chevron {
   color: var(--wh2);
   font-size: 30px;
 }
@@ -545,20 +545,21 @@ footer {
 /*---------->ESTILOS DEL FOOTER REDES SOCIALES<---------*/
 .social {
   margin-top: 3rem;
-  margin-bottom: 3rem;
 }
 
 .social ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .social ul li {
   margin: 0px 20px;
+  margin-bottom: 4rem;
 }
 
-.social ul li a .fa {
+.social ul li a i {
   font-size: 20px;
   color: #555;
   line-height: 30px;
@@ -890,7 +891,7 @@ textarea {
 
 }
 
-.card {
+.card-sw {
   width: 350px;
   background-color: var(--bl2);
   border-radius: 10px;
@@ -961,7 +962,7 @@ textarea {
   padding: 0 15px 0 65px;
 }
 
-.icon-search {
+.search {
   height: 100%;
   top: 0;
   left: 0;
@@ -970,24 +971,24 @@ textarea {
   background-color: #2d2d2d;
 }
 
-.fa-magnifying-glass,
-.input-box .b-close {
+.icon-search,
+.b-close {
   position: absolute;
   top: 50%;
   font-size: 20px;
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.fa-magnifying-glass {
+.icon-search {
   color: var(--wh);
   transform: translateY(-50%) rotate(90deg);
 }
 
-.input-box.open .fa-magnifying-glass {
+.input-box.open .icon-search {
   transform: translateY(-50%) rotate(0);
 }
 
-.input-box .b-close {
+.b-close {
   right: 15px;
   color: var(--lighbl);
   padding: 5px;
@@ -996,7 +997,7 @@ textarea {
   transform: translateY(-50%);
 }
 
-.input-box .b-close:hover {
+.b-close:hover {
   cursor: pointer;
   color: var(--pk);
 }
@@ -1053,13 +1054,13 @@ textarea {
   padding: 0.25em;
 }
 
-.m-close {
+.icon-close {
   background-color: transparent;
   color: var(--lighbl);
   border: none;
 }
 
-.m-close:hover {
+.icon-close:hover {
   color: var(--pk);
 }
 
@@ -1072,7 +1073,6 @@ textarea {
 }
 
 /*---------->ESTILOS DEL MODAL<---------*/
-
 .fondo {
   background-color: #fff;
 }
@@ -1279,6 +1279,8 @@ textarea {
 }
 
 @media screen and (max-width: 767px) {
+
+  /* Logo Header */
   #eclipse {
     width: 100px;
     height: 100px;
@@ -1291,30 +1293,37 @@ textarea {
     transform-origin: 60px 60px;
   }
 
+  /* Titulo */
   .titulo b {
     font-size: 2rem;
   }
 
+  /* Subtitulo de las Secciones */
   .subtitulo {
     font-size: 2rem;
   }
 
+  /* Texto de los item */
   .n-service {
     font-size: 1.2rem;
   }
 
+  /* Texto de los item section */
   .service p {
     font-size: 0.8rem;
   }
 
+  /* Lista de la section Servicios Técnico  */
   .service ul li {
     font-size: 0.8rem;
   }
 
+  /* Pregunta */
   .question {
     font-size: 1rem;
   }
 
+  /* Respuesta de la Pregunta */
   .faq-answer p {
     font-size: 0.8rem;
   }
@@ -1322,6 +1331,7 @@ textarea {
 
 @media screen and (max-width: 576px) {
 
+  /* ocultar btns de la section Galería */
   .sw-n,
   .sw-p {
     visibility: hidden;

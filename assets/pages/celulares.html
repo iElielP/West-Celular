@@ -32,7 +32,7 @@
       
       <!-- Scroll Bar Progress -->
       <div class="progress progress-cont">
-        <div class="progress-bar progress-bar-striped progress-bar-animated prog-bar" id="progressBar"
+        <div class="progress-bar prog-bar" id="progressBar"
           role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
           aria-valuemax="100"></div>
       </div>
@@ -73,7 +73,7 @@
     <!-- Destacado -->
     <div class="swiper-container sw-cont">
       <div class="swiper-wrapper">
-        <div class="swiper-slide card">
+        <div class="swiper-slide card-sw">
           <div class="celular">
             <img src="../img/celulares/ing/x1.jpg" alt="" />
           </div>
@@ -83,7 +83,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide card">
+        <div class="swiper-slide card-sw">
           <div class="celular">
             <img src="../img/celulares/ing/s1.jpg" alt="" />
           </div>
@@ -93,7 +93,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide card">
+        <div class="swiper-slide card-sw">
           <div class="celular">
             <img src="../img/celulares/ing/x2.jpg" alt="" />
           </div>
@@ -103,7 +103,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide card">
+        <div class="swiper-slide card-sw">
           <div class="celular">
             <img src="../img/celulares/ing/m1.jpg" alt="" />
           </div>
@@ -113,7 +113,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide card">
+        <div class="swiper-slide card-sw">
           <div class="celular">
             <img src="../img/celulares/ing/m2.jpg" alt="" />
           </div>
@@ -123,7 +123,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide card">
+        <div class="swiper-slide card-sw">
           <div class="celular">
             <img src="../img/celulares/ing/s2.jpg" alt="" />
           </div>
@@ -133,14 +133,14 @@
           </div>
         </div>
       </div>
-      <div class="swiper-pagination .sw-cl"></div>
+      <div class="swiper-pagination"></div>
     </div>
 
     <!-- Buscar -->
     <div class="input-box position-relative">
       <input type="text" placeholder="Buscar..." />
-      <span class="icon-search d-flex position-absolute justify-content-center">
-        <i class="fa-solid fa-magnifying-glass filter-act"></i>
+      <span class="search d-flex position-absolute justify-content-center">
+        <i class="fa-solid fa-magnifying-glass icon-search"></i>
       </span>
       <i class="fa-solid fa-xmark b-close" onclick="activar"></i>
     </div>
@@ -163,19 +163,19 @@
           <span class="filter__current-filter filter-xiaomi filter-active">
             Xiaomi
             <label for="xiaomi">
-              <i class="fa-solid fa-xmark m-close"></i>
+              <i class="fa-solid fa-xmark icon-close"></i>
             </label>
           </span>
           <span class="filter__current-filter filter-motorola filter-active">
             Motorola
             <label for="motorola">
-              <i class="fa-solid fa-xmark m-close"></i>
+              <i class="fa-solid fa-xmark icon-close"></i>
             </label>
           </span>
           <span class="filter__current-filter filter-samsung filter-active">
             Samsung
             <label for="samsung">
-              <i class="fa-solid fa-xmark m-close"></i>
+              <i class="fa-solid fa-xmark icon-close"></i>
             </label>
           </span>
         </div>
@@ -312,7 +312,7 @@
           <div class="modal-content mi-modal">
             <div class="modal-header">
               <h1 class="modal-title fs-3" id="filterModalLabel">Categoría <i class="fa-solid fa-filter"></i></h1>
-              <button type="button" class="fa-solid fa-xmark m-close fs-3" data-bs-dismiss="modal"
+              <button type="button" class="fa-solid fa-xmark icon-close fs-3" data-bs-dismiss="modal"
                 aria-label="Close"></button>
             </div>
             <div class=" modal__scroll-area">
@@ -387,8 +387,8 @@
       <div class="modal-dialog">
         <div class="modal-content mi-modal">
           <div class="modal-header">
-            <h1 class="modal-title fs-3" id="mapModalLabel">Ubicación <i class="fa fa-location-dot"></i></h1>
-            <button type="button" class="fa-solid fa-xmark m-close fs-3" data-bs-dismiss="modal"
+            <h1 class="modal-title fs-3" id="mapModalLabel">Ubicación <i class="fa fa-location-dot text-danger"></i></h1>
+            <button type="button" class="fa-solid fa-xmark icon-close fs-3" data-bs-dismiss="modal"
               aria-label="Close"></button>
           </div>
           <div class="modal-body">
