@@ -1259,6 +1259,13 @@ textarea {
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: 0.5s;
+  border: none;
+}
+
+.info:hover {
+  background: var(--bl2);
+  box-shadow: 0px 2px 10px 5px var(--pk);
+  color: var(--pk);
 }
 
 /*---------->ESTILOS RESPONSIVO<---------*/
