@@ -338,7 +338,7 @@ nav .nav-content {
   transform: rotate(-45deg);
 }
 
-.nav-content .toggle-btn,
+.toggle-btn,
 .nav-content span a {
   height: 60px;
   width: 60px;
@@ -350,7 +350,7 @@ nav .nav-content {
   border-radius: 50%;
 }
 
-.nav-content .toggle-btn {
+.toggle-btn {
   font-size: 35px;
   color: var(--wh);
   z-index: 2;
@@ -704,25 +704,25 @@ textarea {
   width: 80%;
 }
 
-.form-contact .ctn-inputs {
+.ctn-inputs {
   margin-bottom: 50px;
   position: relative;
 }
 
-.form-contact .ctn-middle {
+.ctn-middle {
   display: inline-block;
   margin-right: 10px;
   width: 40%;
 }
 
-.form-contact .ctn-inputs .effect-input:-webkit-autofill,
-.form-contact .ctn-inputs .effect-input:-webkit-autofill:hover,
-.form-contact .ctn-inputs .effect-input:-webkit-autofill:focus,
-.form-contact .ctn-inputs .effect-input:-webkit-autofill:active {
+.effect-input:-webkit-autofill,
+.effect-input:-webkit-autofill:hover,
+.effect-input:-webkit-autofill:focus,
+.effect-input:-webkit-autofill:active {
   box-shadow: 0 0 0 1000px #f2f2f2 inset;
 }
 
-.form-contact .ctn-inputs .support-text-form-contact {
+.support-text-form-contact {
   color: var(--gr);
   font-family: "Roboto";
   font-weight: 400;
@@ -734,13 +734,13 @@ textarea {
   user-select: none;
 }
 
-.form-contact .ctn-inputs .support-text-form-contact.active-input-form-contact {
+.support-text-form-contact.active-input-form-contact {
   color: #7d7d7d;
   font-size: 12px;
   top: -20px;
 }
 
-.form-contact .ctn-inputs .effect-input {
+.effect-input {
   background-color: rgba(0, 0, 0, 0);
   border-style: none;
   color: var(--wh);
@@ -754,11 +754,11 @@ textarea {
   width: 100%;
 }
 
-.form-contact .ctn-inputs .effect-input.inline-block {
+.effect-input.inline-block {
   display: inline-block;
 }
 
-.form-contact .ctn-inputs .bar-input-effect:before {
+.bar-input-effect:before {
   content: "";
   background-color: var(--pk);
   bottom: 0;
@@ -768,7 +768,7 @@ textarea {
   width: 0;
 }
 
-.form-contact .ctn-inputs .bar-input-effect {
+.bar-input-effect {
   display: block;
   position: relative;
 }
@@ -777,19 +777,19 @@ textarea {
   text-transform: capitalize;
 }
 
-.form-contact .ctn-inputs .validate-input:invalid {
+.validate-input:invalid {
   border-bottom-color: #f53535;
 }
 
-.form-contact .ctn-inputs .validate-input:invalid+.bar-input-effect:before {
+.validate-input:invalid+.bar-input-effect:before {
   background-color: #f53535;
 }
 
-.form-contact .ctn-inputs .bar-input-effect.active-input-form-contact:before {
+.bar-input-effect.active-input-form-contact:before {
   width: 100%;
 }
 
-.form-contact .ctn-inputs .bar-input-effect .clear-input-icon {
+.clear-input-icon {
   bottom: 1rem;
   color: #7a7a7a;
   cursor: pointer;
@@ -799,34 +799,29 @@ textarea {
   right: 1%;
 }
 
-.form-contact .ctn-inputs .bar-input-effect .clear-input-icon:hover,
-.form-contact .ctn-inputs .bar-input-effect .clear-input-icon:focus,
-.form-contact .ctn-inputs .bar-input-effect .clear-input-icon:active {
+.clear-input-icon:hover,
+.clear-input-icon:focus,
+.clear-input-icon:active {
   color: #4a4a4a;
 }
 
-.form-contact .ctn-inputs .validate-input:invalid+.bar-input-effect .clear-input-icon {
+.validate-input:invalid+.bar-input-effect .clear-input-icon {
   color: #f15555;
 }
 
-.form-contact .ctn-inputs .validate-input:invalid+.bar-input-effect .clear-input-icon:hover,
-.form-contact .ctn-inputs .validate-input:invalid+.bar-input-effect .clear-input-icon:focus,
-.form-contact .ctn-inputs .validate-input:invalid+.bar-input-effect .clear-input-icon:active {
+.validate-input:invalid+.bar-input-effect .clear-input-icon:hover,
+.validate-input:invalid+.bar-input-effect .clear-input-icon:focus,
+.validate-input:invalid+.bar-input-effect .clear-input-icon:active {
   color: #f14040;
 }
 
-.form-contact .ctn-inputs .error-input-form-contact {
+.error-input-form-contact {
   color: #f35252;
   display: inline-block;
   font: normal 12px "Nunito Sans", sans-serif;
   line-height: 15px;
   position: relative;
   top: 5px;
-}
-
-.form-contact .ctn-btns-form-contact {
-  display: flex;
-  justify-content: space-around;
 }
 
 .btn-form-contact {
@@ -1194,7 +1189,7 @@ textarea {
   color: rgba(0, 0, 0, 0.1);
 }
 
-.product .card-mobile {
+.card-mobile {
   position: relative;
   width: 100%;
   display: flex;
@@ -1204,7 +1199,7 @@ textarea {
   z-index: 1;
 }
 
-.product .card-mobile img {
+.card-mobile img {
   max-width: 80%;
   transition: 0.5s;
 }
