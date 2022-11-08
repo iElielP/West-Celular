@@ -178,7 +178,7 @@ $(document).ready(function () {
 		let msnEmailInvalid = 'debe ser un correo valido';
 		let msnNumInvalid = 'debe llevar números';
 		let msnCaracteresEspeciales = 'deber ir sin caracteres especiales como ([{(°|!#$%&:;/()¡<>ñ)}])';
-		let msnCampos = [campoNombres, campoCorreo, campoTelefono, campoMensaje];
+		let msnCampos = [campoNombres, campoCorreo, campoTelefono,, campoMensaje];
 
 		// Validaciones para cuando el campo esta vacío o si es demasiado corto
 		if (formContactNombres === '')

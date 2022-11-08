@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
   <!-- Estilos CSS -->
-  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../css/style.css" />
   <!-- Tipografías -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,20 +24,20 @@
 
 <body>
   <!-- Partículas del Fondo-->
-  <div id="particles-js" class="position-fixed"></div>
+  <div id="particles-js"></div>
   <header>
     <!-- Scroll Bar Progress -->
-    <div class="progress progress-cont">
-      <div class="progress-bar prog-bar" id="progressBar" role="progressbar"
-        aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress prog-cont">
+      <div class="progress-bar" id="progressBar" role="progressbar" aria-label="Animated striped example"
+        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
     <!-- Logo -->
-    <div id="eclipse" class="d-flex align-items-center justify-content-center">
+    <div id="eclipse">
       <img src="../img/logo.png" alt="Logo de West Celular" />
     </div>
     <!-- Menu -->
-    <nav class="d-flex align-items-center justify-content-center position-fixed">
-      <div class="nav-content d-flex align-items-center justify-content-center">
+    <nav>
+      <div class="nav-content">
         <div class="toggle-btn">
           <i class="fa-solid fa-plus"></i>
         </div>
@@ -59,7 +59,7 @@
   <main>
     <!--Formulario para contactarnos-->
     <section class="container-xxl container-md contenedor">
-      <h2 class="subtitulo">Formulario</h2>
+      <h2>Formulario</h2>
       <div class="row">
         <img class="col-lg-4" src="../img/contact.svg" alt="Ilustración de una reparación de un celular" />
         <div class="col-lg-8">
@@ -99,7 +99,7 @@
               </label>
 
               <input type="tel" name="contact_tel_user_grupoamsi" id="contact_tel_user_grupoamsi" pattern="[0-9]{7,11}"
-                class="inline-block effect-input" min="2000000" max="3500000000" minlength="7" maxlength="11"
+                class="inline-block effect-input" min="2000000" max="3500000000" minlength="7" maxlength="10"
                 autocomplete="off" />
               <span class="bar-input-effect">
                 <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
@@ -123,10 +123,10 @@
 
             <div class="d-flex justify-content-around">
               <input type="reset" id="clear_contact_user_grupoamsi" name="clear_contact_user_grupoamsi"
-                class="btn-form-contact" value="Limpiar" />
+                class="m-btn limpiar" value="Limpiar" />
 
               <input type="submit" id="send_contact_user_grupoamsi" name="send_contact_user_grupoamsi"
-                class="btn-form-contact" value="Enviar" />
+                class="m-btn aplicar" value="Enviar" />
             </div>
           </form>
         </div>
@@ -143,7 +143,7 @@
         </div>
       </div>
       <!-- Redes Sociales -->
-      <div class="d-flex justify-content-center social">
+      <div class="social">
         <ul class="d-flex">
           <li>
             <a href="https://www.facebook.com/westcelulares2019" target="_blank"><i class="fa fa-facebook"
@@ -177,9 +177,10 @@
       <div class="modal-dialog">
         <div class="modal-content mi-modal">
           <div class="modal-header">
-            <h1 class="modal-title fs-3" id="mapModalLabel">Ubicación <i class="fa fa-location-dot text-danger"></i></h1>
+            <h1 class="modal-title fs-3" id="mapModalLabel">Ubicación <i class="fa fa-location-dot text-danger"></i>
+            </h1>
             <button type="button" class="fa-solid fa-xmark icon-close fs-3" data-bs-dismiss="modal"
-              aria-label="Close"></button>
+              aria-label="close"></button>
           </div>
           <div class="modal-body">
             <iframe
@@ -188,7 +189,7 @@
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="modal-footer">
-            <button class="m-btn cerrar" type="button" data-close-modal>
+            <button class="m-btn cerrar" type="button" data-bs-dismiss="modal" aria-label="close">
               Cerrar Ventana
             </button>
           </div>
@@ -198,23 +199,21 @@
   </footer>
 
   <!-- Scripts -->
-  <!-- Partículas del fondo -->
-  <script src="../js/particles.min.js"></script>
-  <script src="../js/fondo.js"></script>
-  <!-- Progreso scroll -->
-  <script src="../js/progress.js"></script>
-  <!-- Menu Flotante -->
-  <script src="../js/menu.js"></script>
-  <!-- Partial -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <!-- Validación de Contacto -->
   <script src="../js/contacto.js"></script>
+  <!-- Partículas del fondo -->
+  <script src="../js/particles.min.js"></script>
+  <!-- Fondo - Progress bar - Menu -->
+  <script src="../js/body.js"></script>
   <!-- Icons Font Awesome -->
   <script src="https://kit.fontawesome.com/bc21839583.js" crossorigin="anonymous"></script>
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
+
 </body>
 
 </html>

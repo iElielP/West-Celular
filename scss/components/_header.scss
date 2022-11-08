@@ -1,0 +1,240 @@
+.header {
+  padding: 0;
+  margin: 0;
+}
+
+// ESTILOS DEL LA BARRA DE PROGRESO
+.prog-cont {
+  position: fixed;
+  background-color: transparent;
+  border: none;
+  top: 0;
+  padding: 0;
+  z-index: 2;
+
+  div {
+    position: fixed;
+    background: map-get($header, prog);
+    height: 10px;
+  }
+}
+
+// ESTILOS DEL LOGO
+#eclipse {
+  @extend %dp-f;
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+  background-color: nth($colores, 2);
+  border-radius: 50%;
+
+  @media screen and (max-width: 767px) {
+    width: 100px;
+    height: 100px;
+  }
+
+  img {
+    width: 80%;
+    object-fit: contain;
+  }
+}
+
+#eclipse:before,
+#eclipse:after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform-origin: 90px 90px;
+
+  @media screen and (max-width: 767px) {
+    width: 100px;
+    height: 100px;
+    transform-origin: 60px 60px;
+  }
+}
+
+#eclipse:before {
+  top: 0;
+  left: 0;
+  background: map-get($header, log-bg-b);
+  box-shadow: map-get($header, log-bs-b);
+  animation-name: Halo1;
+  animation-duration: 4s;
+}
+
+#eclipse:after {
+  top: 0;
+  left: 0;
+  background: map-get($header, log-bg-a);
+  box-shadow: map-get($header, log-bs-a);
+  animation-name: Halo2;
+  animation-duration: 5s;
+}
+
+@keyframes Halo1 {
+  from {
+    transform: rotateZ(0deg);
+    opacity: 0.2;
+  }
+
+  to {
+    transform: rotateZ(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes Halo2 {
+  from {
+    transform: rotateZ(0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: rotateZ(360deg);
+    opacity: 0.2;
+  }
+}
+
+// ESTILOS DEL TITULO
+.titulo {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 10px 30px;
+  background-color: nth($colores, 2);
+  border-radius: 50px;
+
+  b {
+    font-size: 3rem;
+    font-family: "Source Code Pro";
+    color: nth($colores, 1);
+    text-shadow: map-get($header, tit-ts);
+
+    @media screen and (max-width: 767px) {
+      font-size: 2rem;
+    }
+
+    span {
+      animation: blink linear infinite 2s;
+    }
+
+    span:nth-of-type(2) {
+      animation: blink linear infinite 3s;
+      -webkit-animation: blink linear infinite 3s;
+    }
+  }
+}
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+
+  79% {
+    color: nth($colores, 14);
+  }
+
+  80% {
+    text-shadow: none;
+  }
+
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+
+  82% {
+    color: nth($colores, 14);
+    text-shadow: none;
+  }
+
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+
+  92% {
+    color: nth($colores, 14);
+    text-shadow: none;
+  }
+
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+// ESTILOS DEL MENU
+nav {
+  @extend %dp-f;
+  position: fixed;
+  top: 150px;
+  right: 0;
+  width: 80px;
+  z-index: 2;
+
+  .nav-content {
+    @extend %dp-f;
+    transform: rotate(-45deg);
+
+    .toggle-btn,
+    span a {
+      height: 60px;
+      width: 60px;
+      background: nth($colores, 2);
+      @extend %dp-f;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+    }
+
+    .toggle-btn {
+      font-size: 35px;
+      color: nth($colores, 1);
+      z-index: 2;
+      cursor: pointer;
+      transform: rotate(-225deg);
+      transition: all 0.6s ease;
+    }
+
+    span {
+      position: absolute;
+      transition: all 0.6s ease;
+      opacity: 0;
+
+      a {
+        text-decoration: none;
+        transform: rotate(45deg);
+        cursor: pointer;
+
+        i {
+          font-size: 24px;
+          color: nth($colores, 15);
+          transform: rotate(calc(var(--i) * (360deg / -8)));
+          opacity: 0.8;
+          transition: 0.2s;
+        }
+      }
+    }
+
+    span a:hover i {
+      opacity: 1;
+    }
+  }
+}
+
+nav.open .toggle-btn {
+  transform: rotate(0deg);
+}
+
+nav.open .nav-content span {
+  transform: rotate(calc(var(--i) * (360deg / 8))) translateY(120px);
+  opacity: 1;
+}

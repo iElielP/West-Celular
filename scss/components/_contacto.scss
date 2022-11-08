@@ -1,0 +1,175 @@
+//ESTILOS DEL FORMULARIO CONTACTO
+.form-contact {
+  margin: 1em auto;
+  padding: 50px 0;
+  width: 80%;
+
+  @media screen and (max-width: 991px) {
+    width: 85%;
+  }
+  .ctn-inputs {
+    margin-bottom: 50px;
+    position: relative;
+
+    #contact_name_user_grupoamsi {
+      text-transform: capitalize;
+    }
+
+    .support-text-form-contact {
+      color: nth($colores, 7);
+      font-family: "Roboto";
+      font-weight: 400;
+      left: 5px;
+      pointer-events: none;
+      position: absolute;
+      top: 10px;
+      transition: 0.3s ease all;
+      user-select: none;
+    }
+
+    .support-text-form-contact.active-input-form-contact {
+      color: nth($colores, 16);
+      font-size: 12px;
+      top: -20px;
+    }
+
+    .bar-input-effect {
+      display: block;
+      position: relative;
+
+      .clear-input-icon {
+        bottom: 1rem;
+        color: nth($colores, 16);
+        cursor: pointer;
+        display: none;
+        font-size: 12px;
+        position: absolute;
+        right: 1%;
+      }
+
+      .clear-input-icon:hover,
+      .clear-input-icon:focus,
+      .clear-input-icon:active {
+        color: #4a4a4a;
+      }
+    }
+
+    .bar-input-effect:before {
+      content: "";
+      background-color: #0b8808;
+      bottom: 0;
+      height: 2px;
+      position: absolute;
+      transition: 0.3s ease all;
+      width: 0;
+    }
+
+    .bar-input-effect.active-input-form-contact:before {
+      width: 100%;
+    }
+
+    .error-input-form-contact {
+      color: nth($colores, 17);
+      display: inline-block;
+      font: normal 12px "Nunito Sans", sans-serif;
+      line-height: 15px;
+      position: relative;
+      top: 5px;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .effect-input {
+      background-color: rgba(0, 0, 0, 0);
+      border-style: none;
+      color: nth($colores, 1);
+      border-bottom: 1px solid nth($colores, 5);
+      display: block;
+      font-family: "Inter";
+      font-weight: 400;
+      letter-spacing: 1px;
+      padding: 1em 20px 1em 5px;
+      text-transform: lowercase;
+      width: 100%;
+    }
+
+    .effect-input:-webkit-autofill,
+    .effect-input:-webkit-autofill:hover,
+    .effect-input:-webkit-autofill:focus,
+    .effect-input:-webkit-autofill:active {
+      box-shadow: 0 0 0 1000px nth($colores, 1) inset;
+    }
+
+    textarea {
+      height: 100px;
+      line-height: 20px;
+      resize: none;
+    }
+    textarea::-webkit-scrollbar {
+      width: 5px;
+      display: block;
+    }
+
+    textarea::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+      box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+    }
+  }
+
+  .ctn-middle {
+    display: inline-block;
+    margin-right: 10px;
+    width: 40%;
+
+    @media screen and (max-width: 991px) {
+      width: 60%;
+    }
+  }
+}
+
+.validate-input:invalid {
+  border-bottom-color: nth($colores, 17);
+}
+
+.validate-input:invalid + .bar-input-effect:before {
+  background-color: nth($colores, 17);
+}
+
+.validate-input:invalid + .bar-input-effect .clear-input-icon {
+  color: nth($colores, 17);
+}
+
+.validate-input:invalid + .bar-input-effect .clear-input-icon:hover,
+.validate-input:invalid + .bar-input-effect .clear-input-icon:focus,
+.validate-input:invalid + .bar-input-effect .clear-input-icon:active {
+  color: nth($colores, 17);
+}
+
+.shake {
+  animation: shake 1s 1;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateZ(0px);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}

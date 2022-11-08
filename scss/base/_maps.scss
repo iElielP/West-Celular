@@ -1,0 +1,52 @@
+$header: (
+  prog:
+    linear-gradient(
+      100deg,
+      rgba(27, 68, 96, 1) 15%,
+      rgba(73, 182, 255, 1) 70%,
+      rgba(187, 228, 255, 1) 95%,
+    ),
+  log-bg-b: nth($colores, 10),
+  log-bs-b: 0 0 200px nth($colores, 11),
+  log-bg-a: nth($colores, 12),
+  log-bs-a: 0 0 200px nth($colores, 13),
+  tit-ts: (
+    0 -40px 100px,
+    0 0 2px,
+    0 0 1em nth($colores, 4),
+    0 0 0.5em nth($colores, 4),
+    0 0 0.1em nth($colores, 4),
+    0 10px 3px nth($colores, 2),
+  ),
+);
+
+$modal: (
+  m-btn: (
+    1px 0px nth($colores, 19),
+    0px 1px nth($colores, 19),
+    2px 1px nth($colores, 19),
+    1px 2px nth($colores, 19),
+    3px 2px nth($colores, 19),
+    2px 3px nth($colores, 19),
+    4px 3px nth($colores, 19),
+    3px 4px nth($colores, 19),
+    5px 4px nth($colores, 19),
+    4px 5px nth($colores, 19),
+    6px 5px nth($colores, 19),
+    5px 6px nth($colores, 19),
+  ),
+  m-btn-a: (
+    1px 0px nth($colores, 19),
+    0px 1px nth($colores, 19),
+    2px 1px nth($colores, 19),
+    1px 2px nth($colores, 19),
+    3px 2px nth($colores, 19),
+    2px 3px nth($colores, 19),
+    4px 3px nth($colores, 19),
+    3px 4px nth($colores, 19),
+  ),
+);
+
+$bg: (
+  bg-black: linear-gradient(to top, #11151c 0%, #122d40 100%),
+);

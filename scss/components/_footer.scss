@@ -1,0 +1,171 @@
+// ESTILOS DEL FOOTER
+footer {
+  padding: 3rem 8%;
+  background-color: nth($colores, 8);
+  border-top-left-radius: 90%;
+}
+
+.logof {
+  width: 150px;
+  margin-top: 5rem;
+}
+
+.copyright {
+  color: var(--wh2);
+  opacity: 0.3;
+  font-family: "Roboto Condensed";
+  text-align: center;
+}
+
+// ESTILOS DEL TITULO DEL FOOTER
+.titulo-f b {
+  font-size: 3rem;
+  font-family: "Source Code Pro";
+  color: nth($colores, 1);
+  text-shadow: map-get($header, tit-ts);
+}
+
+.titulo-f b span {
+  animation: blink linear infinite 2s;
+}
+
+.titulo-f b span:nth-of-type(2) {
+  animation: blink linear infinite 3s;
+}
+
+// ESTILOS DEL FOOTER DE LAS REDES SOCIALES
+.social {
+  margin-top: 3rem;
+  @extend %dp-f;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+
+    li {
+      margin: 0px 20px;
+      margin-bottom: 4rem;
+
+      a {
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: nth($colores, 1);
+        text-align: center;
+        transform: perspective(1000px) rotate(-30deg) skew(25deg)
+          translate(0, 0);
+        transition: 0.5s;
+        box-shadow: -20px 20px 10px rgba(255, 255, 255, 0.5);
+
+        i {
+          font-size: 20px;
+          color: #555;
+          line-height: 30px;
+          transition: 0.5s;
+        }
+      }
+
+      a::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        height: 100%;
+        width: 20px;
+        background: #b2b2b2;
+        transition: 0.5s;
+        transform: rotate(0deg) skewY(-45deg);
+      }
+
+      a::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: -10px;
+        height: 20px;
+        width: 100%;
+        background: #e5e5e5;
+        transition: 0.5s;
+        transform: rotate(0deg) skewX(-45deg);
+      }
+
+      a:hover {
+        transform: perspective(1000px) rotate(-30deg) skew(25deg)
+          translate(20px, -20px);
+        box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    li:hover a i {
+      color: nth($colores, 1);
+    }
+
+    // ESTILOS DE FACEBOOK
+    li:hover:nth-child(1) a {
+      background-color: #3b5999;
+    }
+
+    li:hover:nth-child(1) a::before {
+      background-color: #2f477a;
+    }
+
+    li:hover:nth-child(1) a::after {
+      background-color: #4e69a3;
+    }
+
+    // ESTILOS DE  WHATSAPP
+    li:hover:nth-child(2) a {
+      background-color: #25d366;
+    }
+
+    li:hover:nth-child(2) a::before {
+      background-color: #20b959;
+    }
+
+    li:hover:nth-child(2) a::after {
+      background-color: #40d979;
+    }
+
+    // ESTILOS DE INSTAGRAM
+    li:hover:nth-child(3) a {
+      background-color: #e4405f;
+    }
+
+    li:hover:nth-child(3) a::before {
+      background-color: #b6334c;
+    }
+
+    li:hover:nth-child(3) a::after {
+      background-color: #e6536f;
+    }
+
+    // ESTILOS DE GMAIL
+    li:hover:nth-child(4) a {
+      background-color: #dd4b39;
+    }
+
+    li:hover:nth-child(4) a::before {
+      background-color: #b03c2d;
+    }
+
+    li:hover:nth-child(4) a::after {
+      background-color: #e05d4c;
+    }
+
+    // ESTILOS DE UBICACIÓN
+    li:hover:nth-child(5) a {
+      background-color: #c20d0d;
+    }
+
+    li:hover:nth-child(5) a::before {
+      background-color: #aa0b0b;
+    }
+
+    li:hover:nth-child(5) a::after {
+      background-color: #d14a4a;
+    }
+  }
+}
