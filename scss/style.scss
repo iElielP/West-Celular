@@ -1,12 +1,18 @@
-@import'./base/lists';
-@import'./base/extends';
-@import'./base/maps';
-@import'./components/intro';
-@import'./components/header';
-@import'./components/section';
-@import'./components/modal';
-@import'./components/index';
-@import'./components/contacto';
-@import'./components/celulares';
-@import'./components/footer';
-@import'./components/old';
+//Tipografías
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@500&family=Roboto&family=Roboto+Condensed:wght@400;700&family=Roboto+Mono:wght@700&family=Roboto+Slab&family=Source+Code+Pro&display=swap');
+
+//Base
+@import "./base/lists";
+@import "./base/maps";
+@import "./base/extends";
+
+//Components
+@import "./components/body";
+@import "./components/intro";
+@import "./components/header";
+@import "./components/section";
+@import "./components/modal";
+@import "./components/index";
+@import "./components/contacto";
+@import "./components/celulares";
+@import "./components/footer";

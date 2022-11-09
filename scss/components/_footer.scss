@@ -11,18 +11,15 @@ footer {
 }
 
 .copyright {
-  color: var(--wh2);
+  color: nth($colores, 6);
   opacity: 0.3;
-  font-family: "Roboto Condensed";
+  font-family: Roboto Condensed;
   text-align: center;
 }
 
 // ESTILOS DEL TITULO DEL FOOTER
 .titulo-f b {
-  font-size: 3rem;
-  font-family: "Source Code Pro";
-  color: nth($colores, 1);
-  text-shadow: map-get($header, tit-ts);
+  @extend %f-h;
 }
 
 .titulo-f b span {
@@ -45,7 +42,7 @@ footer {
     flex-wrap: wrap;
 
     li {
-      margin: 0px 20px;
+      margin: 0px 15px;
       margin-bottom: 4rem;
 
       a {
@@ -60,11 +57,21 @@ footer {
         transition: 0.5s;
         box-shadow: -20px 20px 10px rgba(255, 255, 255, 0.5);
 
+        @media screen and (max-width: 576px) {
+          width: 25px;
+          height: 25px;
+        }
+
         i {
           font-size: 20px;
-          color: #555;
+          color: nth($colores, 24);
           line-height: 30px;
           transition: 0.5s;
+
+          @media screen and (max-width: 576px) {
+            line-height: 25px;
+            font-size: 15px;
+          }
         }
       }
 
@@ -78,6 +85,12 @@ footer {
         background: #b2b2b2;
         transition: 0.5s;
         transform: rotate(0deg) skewY(-45deg);
+
+        @media screen and (max-width: 576px) {
+          top: 8px;
+          left: -15px;
+          width: 15px;
+        }
       }
 
       a::after {
@@ -90,6 +103,13 @@ footer {
         background: #e5e5e5;
         transition: 0.5s;
         transform: rotate(0deg) skewX(-45deg);
+
+        @media screen and (max-width: 576px) {
+          bottom: -15px;
+          left: -8px;
+          height: 15px;
+        }
+
       }
 
       a:hover {

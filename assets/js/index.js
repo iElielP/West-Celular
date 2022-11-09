@@ -44,13 +44,12 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-// JS DE LAS PREGUNTAS FRECUENTES
-let collapsibles = document.querySelectorAll('.faq-container')
+//JS PREGUNTA FRECUENTES
+let collapsibles = document.querySelectorAll('.preg')
 
 collapsibles.forEach(element => {
     element.addEventListener("click", () => {
-        element.querySelector('.faq-answer').classList.toggle('openresp');
-        element.querySelector('.question').classList.toggle('active');
+        element.querySelector('.btn-preg').classList.toggle('active');
         element.querySelector('.icon-chevron').classList.toggle('rotate');
     })
 });

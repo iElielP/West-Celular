@@ -1,0 +1,45 @@
+// TIPOGRAFÍAS
+
+// font-family: 'Bebas Neue', cursive;
+// font-family: 'Inter', sans-serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Roboto Condensed', sans-serif;
+// font-family: 'Roboto Mono', monospace;
+// font-family: 'Source Code Pro', monospace;
+// font-family: 'Roboto Slab', serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+body {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+//ESTILOS DEL FONDO
+#particles-js {
+  position: fixed;
+  background: nth($colores, 1);
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}

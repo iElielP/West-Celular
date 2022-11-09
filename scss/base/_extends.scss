@@ -20,8 +20,8 @@
   z-index: 3;
   display: inline-flex;
   border: none;
-  width: 61px;
-  height: 61px;
+  width: 41px;
+  height: 41px;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -36,6 +36,13 @@
   }
 }
 
+%f-h{
+  color: nth($colores, 1);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 3rem;
+  text-shadow: map-get($header, tit-ts);
+}
+
 %icon-m {
   display: inline-block;
   stroke-width: 0;
@@ -47,4 +54,35 @@
   display: flex;
   align-items: center;
 }
+
+%inter-3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+%inter-4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+%inter-5 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+%inter-7 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+%rc-5 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5rem;
+}
+
+%rc-2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.2rem;
+}
+
 

@@ -112,10 +112,7 @@
   border-radius: 50px;
 
   b {
-    font-size: 3rem;
-    font-family: "Source Code Pro";
-    color: nth($colores, 1);
-    text-shadow: map-get($header, tit-ts);
+    @extend %f-h;
 
     @media screen and (max-width: 767px) {
       font-size: 2rem;
@@ -230,11 +227,15 @@ nav {
   }
 }
 
-nav.open .toggle-btn {
-  transform: rotate(0deg);
+nav.open {
+
+  .toggle-btn{
+    transform: rotate(0deg);
+  }
+
+  .nav-content span {
+    transform: rotate(calc(var(--i) * (360deg / 8))) translateY(120px);
+    opacity: 1;
+  }
 }
 
-nav.open .nav-content span {
-  transform: rotate(calc(var(--i) * (360deg / 8))) translateY(120px);
-  opacity: 1;
-}

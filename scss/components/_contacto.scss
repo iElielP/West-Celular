@@ -17,7 +17,7 @@
 
     .support-text-form-contact {
       color: nth($colores, 7);
-      font-family: "Roboto";
+      font-family: 'Roboto', sans-serif;
       font-weight: 400;
       left: 5px;
       pointer-events: none;
@@ -50,13 +50,13 @@
       .clear-input-icon:hover,
       .clear-input-icon:focus,
       .clear-input-icon:active {
-        color: #4a4a4a;
+        color: nth($colores, 24);
       }
     }
 
     .bar-input-effect:before {
       content: "";
-      background-color: #0b8808;
+      background-color: nth($colores, 21);
       bottom: 0;
       height: 2px;
       position: absolute;
@@ -87,8 +87,7 @@
       color: nth($colores, 1);
       border-bottom: 1px solid nth($colores, 5);
       display: block;
-      font-family: "Inter";
-      font-weight: 400;
+      @extend %inter-3;
       letter-spacing: 1px;
       padding: 1em 20px 1em 5px;
       text-transform: lowercase;

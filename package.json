@@ -1,0 +1,24 @@
+{
+  "name": "west-celular",
+  "version": "1.0.0",
+  "description": "Proyecto de una pagina web de ventas de celulares",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iElielP/West-Celular.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iElielP/West-Celular/issues"
+  },
+  "homepage": "https://github.com/iElielP/West-Celular#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}

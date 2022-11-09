@@ -4,7 +4,7 @@ $header: (
       100deg,
       rgba(27, 68, 96, 1) 15%,
       rgba(73, 182, 255, 1) 70%,
-      rgba(187, 228, 255, 1) 95%,
+      rgba(187, 228, 255, 1) 95%
     ),
   log-bg-b: nth($colores, 10),
   log-bs-b: 0 0 200px nth($colores, 11),
@@ -49,4 +49,6 @@ $modal: (
 
 $bg: (
   bg-black: linear-gradient(to top, #11151c 0%, #122d40 100%),
+  bg-f: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%),
+  box-sh: 0 15px 30px -10px rgba(57, 124, 202, 0.5),
 );
