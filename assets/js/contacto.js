@@ -152,10 +152,10 @@ $(document).ready(function () {
 		let letras = 'áéíóúabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
 
 		// Variables para capturar el valor de los inputs y textarea del formulario de contacto
-		let formContactNombres = $('#contact_name_user_grupoamsi').val();
-		let formContactCorreo = $('#contact_email_user_grupoamsi').val();
-		let formContactTelefono = $('#contact_tel_user_grupoamsi').val();
-		let formContactMensaje = $('#contact_comments_user_grupoamsi').val();
+		let formContactNombres = $('#nombre').val();
+		let formContactCorreo = $('#email').val();
+		let formContactTelefono = $('#telefono').val();
+		let formContactMensaje = $('#mensaje').val();
 
 		// Variables para capturar el id de cada error de los campos del formulario de contacto
 		let errorCampoNombres = $('#field-names');
@@ -233,9 +233,9 @@ $(document).ready(function () {
 
 	});
 
-	// Validación para cunado le dan click a los botones al que le de click no se quede con el focus marcado
+	// Validación para cuando le dan click a los botones al que le de click no se quede con el focus marcado
 	$('button').on('click', function () {
 		$(this).blur();
 	});
 
-});
+}); 
