@@ -20,7 +20,7 @@ West Celular es un sitio web que se encargara de brindar informacion de diferent
 * Cambios de estilo y correcciones de errores en el filtrado de celulares.
 * Agregación de filtrado de celulares a través de un buscador.
 * Agregación de nuevas marcas y modelos. *Xiomi - Motorola - Samsung - Iphone.* 
-* Modal ver mas en los celulares.
+* Modal ver mas en los celulares. (solo esta la modal en la primera card de los celulares. porque tengo un poblema cuando agrego mas que no funciona el slide de las imagenes).
 * Modal en el botón de ubicación.
 * Reducir tamaños de imagenes y peso.
 
