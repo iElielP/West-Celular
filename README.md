@@ -1,28 +1,27 @@
 # West Celular 
 
-West Celular es un sitio web que se encargara de brindar informacion de diferentes marcas y modelos de celulares y ventas de los mismos.
+West Celular es un sitio web que se encargara de brindar información de diferentes marcas y modelos de celulares y ventas de los mismos.
 
-## Cambios realizados para la tercera pre-entrega 📃
+## Cambios realizados para la entrega final 📃
 
-* Visualización correcta en dispositivos mobile 📱 y desktop 💻. 
-* Dependencias instaladas nodemon y node-sass.
-* Implementación de código SASS.
-* Utilización de forma correcta SEO.
-* Implementación de técnicas de SEO como meta tags description, keywords, favicon.
-* Completación de los alts de las imágenes.
-* Utilización de las etiquetas semánticas.
-* Implementación de .gitignore para evitar enviar archivos irrelevantes.
-* Carga en el repositorio de GitHud.
+* 🔲 **Estructura 🧱 final de la web 🌐.**
+  * 🔸 Aplicando la legibilidad, la adaptación al framework, el uso de etiquetas y prácticas de SEO.
+  * 🔸 **Formato:** Archivos HTML.
+* 🔲 **Estilo 🎨 final de la web 🌐.**
+  * 🔸 Aplicando los criterios trabajados respecto a estructura visual, diseño atractivo y responsive 📱 💻, y reciclado de código.
+  * 🔸 **Formato:** Archivos CSS + SASS o SCSS.
+* 🔲 **Subida al servidor 🚀.**
+  * 🔸 Utilizando WebHost000.
+  * 🔸 **Formato:** Link al sitio web cargado en el servidor (se encuentra en el apartado "Visualización de West Celular" segunda linea).
 
 ## Cambios generales del proyecto 📄
 
-* Agregación de un accordion de Bootstrap en el index.
-* Cambios de estilo y correcciones de errores en el filtrado de celulares.
-* Agregación de filtrado de celulares a través de un buscador.
-* Agregación de nuevas marcas y modelos. *Xiomi - Motorola - Samsung - Iphone.* 
-* Modal ver mas en los celulares. (solo esta en la primera card. porque tengo un problema cuando agrego mas, y es que no funciona el slide de las imágenes).
-* Modal en el botón de ubicación.
-* Reducir tamaños de imagenes y peso.
+* 🔹 Agregación de envió de formulario.php
+* 🔹 Agregación de Sweet Alerts 2 en el archivo contacto.html como ❌ validación ✔ del formulario y en celulares.html como notificaciones ❗.
+* 🔹 Modal 'ver mas' en celulares.hml, aporta mas imágenes y especificaciones del celular.
+* 🔹 Corrección del scroll 🖲 automático del index.html (las animaciones de AOS hacia que no quede bien posicionado).
+* 🔹 Boton de subir 🔼 en celulares.html (cuando se baja en un determinado momento aparecerá el boton)
+* 🔹 Reducción de tamaños de imágenes, cambio de formato a .webp para comprimir aun mas el peso de las imágenes.
 
 ## Visualización de West Celular 🌐 
 
@@ -34,7 +33,7 @@ West Celular es un sitio web que se encargara de brindar informacion de diferent
 
 Recomendación, usar el programa llamado Visual Studio Code.
 
-_Crear una carpeta donde desea clonar el proyecto y abrirlo con Visual Studio Code, luego abrir el terminal y coloar el siguiente comando_
+_Crear una carpeta donde desea clonar el proyecto y abrirlo con Visual Estudie Code, luego abrir el terminal y colocar el siguiente comando_
 
 ```
 git clone https://github.com/iElielP/West-Celular.git
@@ -47,7 +46,7 @@ _Una vez finalice el comando se le creara una carpeta donde contiene todo el rep
 * **Brandon Eliel Pared** - *Desarrollador Web* - [iElielP](https://github.com/iElielP)
 
 <h4 align="center">
-:construction: Proyecto en construcción :construction:
+🏁 Proyecto Finalizado 🏁
 </h4>
 
 <p align="center">

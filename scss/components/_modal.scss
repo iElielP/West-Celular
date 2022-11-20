@@ -46,7 +46,7 @@
 }
 
 .mi-m-title {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   i {
     color: nth($colores, 22);
   }
@@ -71,11 +71,15 @@
     border: none;
     background-color: nth($colores, 8);
     color: nth($colores, 1);
+    transition: 0.5s;
     @extend %rc-2;
     option {
       font-size: 1rem;
       background-color: nth($colores, 8);
     }
+  }
+  select:focus {
+    box-shadow: 0px 2px 10px 5px nth($colores, 4);
   }
 }
 
@@ -322,11 +326,6 @@
       }
     }
 
-    .next.disabled,
-    .prev.disabled {
-      cursor: not-allowed;
-    }
-
     .next:focus,
     .prev:focus {
       outline: none;
@@ -417,6 +416,9 @@
   @media screen and (max-width: 1200px) {
     font-size: 34px;
   }
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+  }
   @media screen and (max-width: 576px) {
     font-size: 24px;
   }
@@ -430,10 +432,13 @@
   transition: all 0.5s;
 
   @media screen and (max-width: 1200px) {
-    font-size: 36px;
+    font-size: 32px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 26px;
   }
   @media screen and (max-width: 576px) {
-    font-size: 30px;
+    font-size: 22px;
   }
 
   sup {
@@ -463,6 +468,9 @@
     width: 240px;
     h3 {
       @extend %rc-2;
+      @media screen and (max-width: 767px) {
+        font-size: 17px;
+      }
     }
     ul {
       padding-left: 0.5rem;
@@ -471,6 +479,10 @@
         @extend %inter-4;
         list-style: none;
       }
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
     }
   }
 
@@ -512,13 +524,14 @@
 
     @media screen and (max-width: 768px) {
       margin-right: 30px;
+      margin-top: 150px;
     }
     @media screen and (max-width: 576px) {
       width: 100%;
       max-width: 300px;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 50px;
+      margin-bottom: 25px;
     }
   }
 

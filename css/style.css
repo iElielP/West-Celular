@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@500&family=Roboto&family=Roboto+Condensed:wght@400;700&family=Roboto+Mono:wght@700&family=Roboto+Slab&family=Source+Code+Pro&display=swap");
 .social, .card-infos, .product-search .product .card-mobile, .search-filter .input-box .search, nav .nav-content .toggle-btn,
-nav .nav-content span a, nav .nav-content, nav, #eclipse, .intro {
+nav .nav-content span a, nav .nav-content, nav, #eclipse, .intro, #button-up {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +58,7 @@ nav .nav-content span a, nav .nav-content, nav, #eclipse, .intro {
   align-items: center;
 }
 
-.form-contact .ctn-inputs .effect-input, .preg-frec .resp-cont .resp, .service ul li, .service p {
+.form-contact .ctn-inputs .effect-input, .preg-frec .resp-cont .resp, .service ul li, .service p, .cont-alert {
   font-family: "Inter", sans-serif;
   font-weight: 300;
 }
@@ -78,7 +78,7 @@ nav .nav-content span a, nav .nav-content, nav, #eclipse, .intro {
   font-weight: 700;
 }
 
-.preg-frec .preg .btn-preg, .service h3 {
+.preg-frec .preg .btn-preg, .service h3, .alert-titulo {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1.5rem;
 }
@@ -86,6 +86,24 @@ nav .nav-content span a, nav .nav-content, nav, #eclipse, .intro {
 .product-ctr .product-inf h3, .m-select select {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1.2rem;
+}
+
+.til-alert-enviado, .til-alert-error {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.btn-error, .btn-enviado {
+  padding: 10px 30px;
+  margin: 15px 0 15px 0;
+  color: #f8f9fa;
+  text-decoration: none;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  transition: 0.5s;
 }
 
 *,
@@ -107,7 +125,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 10%;
+  scroll-padding-top: 8%;
 }
 
 ::-webkit-scrollbar {
@@ -122,6 +140,31 @@ html {
   z-index: -2;
 }
 
+#button-up {
+  width: 60px;
+  height: 60px;
+  background: #000814;
+  z-index: 2;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: all 300ms ease;
+  transform: scale(0);
+}
+#button-up a i {
+  cursor: pointer;
+  font-size: 35px;
+  color: #f8f9fa;
+}
+
+#button-up:hover {
+  transform: scale(1.1);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
 .intro {
   top: 0;
   width: 100%;
@@ -134,7 +177,7 @@ html {
 }
 .intro img {
   height: 40%;
-  width: 40%;
+  width: 80%;
   object-fit: contain;
 }
 .intro .logo {
@@ -216,6 +259,59 @@ html {
     transform: translate(24px, 0);
   }
 }
+.popup-alert {
+  border-radius: 30px 0 30px 0;
+}
+
+.til-alert-error {
+  color: #d81159;
+}
+
+.til-alert-enviado {
+  color: #49b6ff;
+}
+
+.cont-alert {
+  text-align: center;
+  color: #edf6f9;
+}
+
+.btn-enviado {
+  background-color: #0b8808;
+}
+
+.btn-enviado:hover {
+  background: #11151c;
+  box-shadow: 0px 2px 10px 5px #0b8808;
+  color: #0b8808;
+}
+
+.btn-error {
+  background-color: #9e2a2b;
+}
+
+.btn-error:hover {
+  background: #11151c;
+  box-shadow: 0px 2px 10px 5px #9e2a2b;
+  color: #9e2a2b;
+}
+
+.bar-alert {
+  border-radius: 10px;
+  background: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+}
+
+.popup-info {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  border-radius: 30px 0 30px 0;
+}
+
+.alert-titulo {
+  color: #49b6ff;
+}
+
 .header {
   padding: 0;
   margin: 0;
@@ -506,10 +602,14 @@ nav.open .nav-content span {
   border: none;
   background-color: #11151c;
   color: #f8f9fa;
+  transition: 0.5s;
 }
 .m-select select option {
   font-size: 1rem;
   background-color: #11151c;
+}
+.m-select select:focus {
+  box-shadow: 0px 2px 10px 5px #d81159;
 }
 
 .icon-close {
@@ -767,10 +867,6 @@ nav.open .nav-content span {
     transform: translate(-20%, -50%);
   }
 }
-.content .product-slider .next.disabled,
-.content .product-slider .prev.disabled {
-  cursor: not-allowed;
-}
 .content .product-slider .next:focus,
 .content .product-slider .prev:focus {
   outline: none;
@@ -873,6 +969,11 @@ nav.open .nav-content span {
     font-size: 34px;
   }
 }
+@media screen and (max-width: 767px) {
+  .ps-title {
+    font-size: 28px;
+  }
+}
 @media screen and (max-width: 576px) {
   .ps-title {
     font-size: 24px;
@@ -888,12 +989,17 @@ nav.open .nav-content span {
 }
 @media screen and (max-width: 1200px) {
   .ps-price {
-    font-size: 36px;
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ps-price {
+    font-size: 26px;
   }
 }
 @media screen and (max-width: 576px) {
   .ps-price {
-    font-size: 30px;
+    font-size: 22px;
   }
 }
 .ps-price sup {
@@ -922,12 +1028,22 @@ nav.open .nav-content span {
   text-align: justify;
   width: 240px;
 }
+@media screen and (max-width: 767px) {
+  .product-ctr .product-inf h3 {
+    font-size: 17px;
+  }
+}
 .product-ctr .product-inf ul {
   padding-left: 0.5rem;
 }
 .product-ctr .product-inf ul li {
   font-size: 0.7rem;
   list-style: none;
+}
+@media screen and (max-width: 767px) {
+  .product-ctr .product-inf {
+    width: 100%;
+  }
 }
 .product-ctr .hr-vertical {
   width: 1px;
@@ -968,6 +1084,7 @@ nav.open .nav-content span {
 @media screen and (max-width: 768px) {
   .ps-btn .ps-cart {
     margin-right: 30px;
+    margin-top: 150px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -976,7 +1093,7 @@ nav.open .nav-content span {
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 }
 .ps-btn .ps-fav {
@@ -1319,14 +1436,14 @@ nav.open .nav-content span {
 .search-filter {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 .search-filter .input-box {
   position: relative;
   height: 48px;
   max-width: 48px;
   border-radius: 1.5em;
-  margin-right: 3rem;
+  margin-right: 2rem;
   background-color: #11151c;
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   box-shadow: 0 15px 30px -10px rgba(57, 124, 202, 0.5);
@@ -1391,7 +1508,6 @@ nav.open .nav-content span {
 
 .product-search {
   padding: 2rem;
-  margin-top: 5rem;
 }
 .product-search .product {
   position: relative;

@@ -28,7 +28,7 @@ particlesJS({
     },
     opacity: {
       value: 0.5,
-      random: false,
+      random: true,
       anim: {
         enable: false,
         speed: 1,
@@ -57,7 +57,7 @@ particlesJS({
       enable: true,
       speed: 6,
       direction: "none",
-      random: false,
+      random: true,
       straight: false,
       out_mode: "out",
       bounce: false,
@@ -76,7 +76,7 @@ particlesJS({
         mode: "repulse",
       },
       onclick: {
-        enable: true,
+        enable: false,
         mode: "push",
       },
       resize: true,
@@ -131,3 +131,18 @@ const nav = document.querySelector("nav"),
 toggleBtn.addEventListener("click", () => {
   nav.classList.toggle("open");
 });
+
+// JS DEL BUTTON VOLVER ARRIBA
+
+
+buttonUp = document.getElementById("button-up");
+
+window.onscroll = function () {
+  var scroll = document.documentElement.scrollTop;
+
+  if (scroll > 3000) {
+    buttonUp.style.transform = "scale(1)";
+  } else if (scroll <3000) {
+    buttonUp.style.transform = "scale(0)";
+  }
+};

@@ -36,9 +36,9 @@
   }
 }
 
-%f-h{
+%f-h {
   color: nth($colores, 1);
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-size: 3rem;
   text-shadow: map-get($header, tit-ts);
 }
@@ -85,4 +85,20 @@
   font-size: 1.2rem;
 }
 
+%pd-5 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
 
+%btn-alert{
+  padding: 10px 30px;
+  margin: 15px 0 15px 0;
+  color: nth($colores, 1);
+  text-decoration: none;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  transition: 0.5s;
+}

@@ -6,14 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Tienda online de celulares en Argentina. Servicio técnico. Formulario de Contacto.">
-  <meta name="keywords" content="West Celular, Tienda de celulares, SmartPhones, Celulares, Xiaomi, Redmi, Note, Poco, PocoPhone, Samsung, Z Flip, Motorola, Edge, Iphone, Servicio Técnico, contacto,">
+  <meta name="keywords"
+    content="West Celular, Tienda de celulares, SmartPhones, Celulares, Xiaomi, Redmi, Note, Poco, PocoPhone, Samsung, Z Flip, Motorola, Edge, Iphone, Servicio Técnico, contacto,">
   <!-- CSS Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <!-- CSS Dark Sweet Alert -->
+  <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+  <!-- CSS Animación -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <!-- Estilos CSS -->
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Icono de Pestaña -->
-  <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="./assets/img/icon.webp" type="image/x-icon" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
   <!-- Titulo de Pestaña -->
   <title>Contacto | West Celular</title>
 </head>
@@ -29,7 +36,7 @@
     </div>
     <!-- Logo -->
     <div id="eclipse">
-      <img src="./assets/img/logo.png" alt="Logo de West Celular" />
+      <img src="./assets/img/logo.webp" alt="Logo de West Celular" />
     </div>
     <!-- Menu -->
     <nav>
@@ -59,16 +66,15 @@
       <div class="row">
         <img class="col-lg-4" src="./assets/img/contact.svg" alt="Ilustración de una reparación de un celular" />
         <div class="col-lg-8">
-          <form action="" method="post" id="contact_user_grupoamsi" class="form-contact" autocomplete="off"
-            accept-charset="utf-8">
+          <form method="POST" id="formulario" class="form-contact"
+            autocomplete="off" accept-charset="utf-8">
             <div class="ctn-inputs">
               <label for="nombre" class="support-text-form-contact">
                 Nombre (Requerido)
               </label>
 
-              <input type="text" name="nombre" id="nombre"
-                pattern="[a-zA-Z]{2,100}" class="effect-input" minlength="2" maxlength="100" autocomplete="off"
-                required="required" />
+              <input type="text" name="nombre" id="nombre" pattern="[a-zA-Z]{2,100}" class="effect-input" minlength="2"
+                maxlength="100" autocomplete="off" required="required" />
               <span class="bar-input-effect">
                 <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
               </span>
@@ -80,9 +86,8 @@
                 Email (Requerido)
               </label>
 
-              <input type="email" name="email" id="email"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="effect-input" minlength="6" maxlength="92"
-                autocomplete="off" required="required" />
+              <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                class="effect-input" minlength="6" maxlength="92" autocomplete="off" required="required" />
               <span class="bar-input-effect">
                 <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
               </span>
@@ -94,9 +99,8 @@
                 Teléfono (Optativo)
               </label>
 
-              <input type="tel" name="telefono" id="telefono" pattern="[0-9]{7,11}"
-                class="inline-block effect-input" min="2000000" max="3500000000" minlength="7" maxlength="10"
-                autocomplete="off" />
+              <input type="tel" name="telefono" id="telefono" pattern="[0-9]{7,11}" class="inline-block effect-input"
+                min="2000000" max="3500000000" minlength="7" maxlength="10" autocomplete="off" required="required" />
               <span class="bar-input-effect">
                 <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
               </span>
@@ -108,9 +112,8 @@
                 Mensaje (Requerido)
               </label>
 
-              <textarea name="mensaje" id="mensaje"
-                pattern="[a-zA-Z0-9]{50,400}" class="effect-input" minlength="50" maxlength="400" autocomplete="off"
-                required="required"></textarea>
+              <textarea name="mensaje" id="mensaje" pattern="[a-zA-Z0-9]{50,400}" class="effect-input" minlength="50"
+                maxlength="400" autocomplete="off" required="required"></textarea>
               <span class="bar-input-effect">
                 <i class="fa fa-times clear-input-icon" aria-hidden="true"></i>
               </span>
@@ -118,11 +121,9 @@
             </div>
 
             <div class="d-flex justify-content-around">
-              <input type="reset" id="clear_contact_user_grupoamsi" name="clear_contact_user_grupoamsi"
-                class="m-btn limpiar" value="Limpiar" />
+              <input type="reset" id="limpiar-btn" name="limpiar-btn" class="m-btn limpiar" value="Limpiar" />
 
-              <input type="submit" id="send_contact_user_grupoamsi" name="send_contact_user_grupoamsi"
-                class="m-btn aplicar" value="Enviar" />
+              <input type="button" id="enviar-btn" name="enviar-btn" class="m-btn aplicar" value="Enviar" />
             </div>
           </form>
         </div>
@@ -132,7 +133,7 @@
   <!-- Footer Pie de Pagina -->
   <footer class="container-fluid footer">
     <div class="row-cols-1 text-center">
-      <img src="./assets/img/logo.png" alt="Logo de West Celular en pie de pagina" class="logof" />
+      <img src="./assets/img/logo.webp" alt="Logo de West Celular en pie de pagina" class="logof" />
       <div class=" ">
         <div class="titulo-f">
           <b class="fs-5">We<span>st</span> Cel<span>ul</span>ar</b>
@@ -173,7 +174,8 @@
       <div class="modal-dialog">
         <div class="modal-content mi-modal">
           <div class="modal-header">
-            <h1 class="modal-title fs-3 mi-m-title" id="mapModalLabel">Ubicación <i class="fa fa-location-dot text-danger"></i>
+            <h1 class="modal-title fs-3 mi-m-title" id="mapModalLabel">Ubicación <i
+                class="fa fa-location-dot text-danger"></i>
             </h1>
             <button type="button" class="fa-solid fa-xmark icon-close fs-3" data-bs-dismiss="modal"
               aria-label="close"></button>
@@ -197,6 +199,8 @@
   <!-- Scripts -->
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <!-- Sweet Alerts 2  -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
   <!-- Validación de Contacto -->
   <script src="./assets/js/contacto.js"></script>
   <!-- Partículas del fondo -->

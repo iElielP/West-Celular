@@ -94,13 +94,12 @@
         font-size: 1rem;
       }
     }
-    .btn-preg::after{
+    .btn-preg::after {
       content: none;
     }
     .btn-preg.active {
       color: nth($colores, 4);
     }
-
   }
   .resp-cont {
     .resp {

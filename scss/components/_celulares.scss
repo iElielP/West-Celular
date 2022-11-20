@@ -6,7 +6,7 @@
 
 .card-sw {
   width: 350px;
-  background-image: map-get($bg , bg-black);
+  background-image: map-get($bg, bg-black);
   border-radius: 10px;
 
   .celular {
@@ -46,15 +46,14 @@
 .search-filter {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
-
+  margin-left: 10px;
   // ESTILOS DEL BUSCADOR
   .input-box {
     position: relative;
     height: 48px;
     max-width: 48px;
     border-radius: 1.5em;
-    margin-right: 3rem;
+    margin-right: 2rem;
     background-color: nth($colores, 8);
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     box-shadow: map-get($bg, box-sh);
@@ -136,13 +135,12 @@
 // ESTILOS DEL LOS CARDS
 .product-search {
   padding: 2rem;
-  margin-top: 5rem;
 
   .product {
     position: relative;
     width: 350px;
     height: 550px;
-    background-image: map-get($bg , bg-black);
+    background-image: map-get($bg, bg-black);
     border-radius: 20px;
     overflow: hidden;
 
@@ -188,7 +186,6 @@
     font-size: 6.5em;
     color: rgba(0, 0, 0, 0.1);
   }
-
 }
 
 .product:hover .card-mobile img {

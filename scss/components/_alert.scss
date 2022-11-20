@@ -1,0 +1,59 @@
+.popup-alert {
+  border-radius: 30px 0 30px 0;
+}
+
+.til-alert-error {
+  color: nth($colores, 4);
+  @extend %pd-5;
+}
+
+.til-alert-enviado {
+  color: nth($colores, 5);
+  @extend %pd-5;
+}
+
+.cont-alert {
+  text-align: center;
+  color: nth($colores, 6);
+  @extend %inter-3;
+}
+
+.btn-enviado {
+  background-color: nth($colores, 21);
+  @extend %btn-alert;
+}
+
+.btn-enviado:hover {
+  background: nth($colores, 8);
+  box-shadow: 0px 2px 10px 5px nth($colores, 21);
+  color: nth($colores, 21);
+}
+
+.btn-error {
+  background-color: nth($colores, 23);
+  @extend %btn-alert;
+}
+
+.btn-error:hover {
+  background: nth($colores, 8);
+  box-shadow: 0px 2px 10px 5px nth($colores, 23);
+  color: nth($colores, 23);
+}
+
+.bar-alert {
+  border-radius: 10px;
+  background: map-get($bg, bg-f);
+}
+
+.popup-info {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  border-radius: 30px 0 30px 0;
+}
+
+.alert-titulo {
+  color: nth($colores, 5);
+  @extend %rc-5;
+}
+
