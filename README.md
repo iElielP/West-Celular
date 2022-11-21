@@ -52,7 +52,7 @@ _Una vez finalice el comando se le creara una carpeta donde contiene todo el rep
 </h4>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-blue">
+  <img src="https://img.shields.io/badge/STATUS-TERMINADO-blue">
   <img src="https://img.shields.io/badge/NODE%20SASS-EN%208.0.0-blue">
   <img src="https://img.shields.io/badge/NODEMON-EN%202.0.20-blue">
 </p>
