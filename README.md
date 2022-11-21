@@ -2,6 +2,8 @@
 
 West Celular es un sitio web que se encargara de brindar información de diferentes marcas y modelos de celulares y ventas de los mismos.
 
+Contendrá un inicio donde se explicara la forma en la que trabajamos en West Celular, un apartado de contacto donde podrán realizar consultas que van a ser enviadas un correo en particular y serán contestadas a la brevedad y por ultimo otro apartado de todos los celulares disponibles con sus respectivas imágenes, precios y especificaciones. Realizando un apartado llamativo que contendrá la facilidad al usuario encontrar el celular que desea, esto se realizara a través de por búsqueda o por características relevantes ya sea marca o almacenamiento. 
+
 ## Cambios realizados para la entrega final 📃
 
 * **Estructura 🧱 final de la web. 🌐**
