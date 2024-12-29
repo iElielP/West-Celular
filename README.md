@@ -1,31 +1,41 @@
 # West Celular 
 
-West Celular es un sitio web que se encargara de brindar información de diferentes marcas y modelos de celulares y ventas de los mismos.
+West Celular es un sitio web diseñado para ofrecer información detallada sobre diversas marcas y modelos de celulares, además de gestionar la venta de los mismos.
 
-Contendrá un **inicio** donde se explicara como trabajamos en **West Celular**. Un apartado de **contacto** donde podrán realizar consultas que van a ser enviadas a nuestro correo y serán contestadas a la brevedad. Por ultimo, otro apartado de los **celulares** disponibles, con sus respectivas imágenes, precios y especificaciones. Realizando un apartado llamativo que **facilitara al usuario encontrar el celular que desea**, esto se realizara a través de un filtro por **búsqueda** y otro filtro por **características** ya sea **marcas** o **almacenamientos**. 
+## Características principales del sitio web 🌐
+* **Página de inicio:** Explicamos cómo trabajamos en West Celular, destacando nuestros valores y servicios.
+* **Sección de contacto:** Los usuarios pueden realizar consultas a través de un formulario, cuyos mensajes serán enviados a nuestro correo electrónico y respondidos a la brevedad.
+* **Catálogo de celulares:** Incluye imágenes, precios y especificaciones técnicas de los productos disponibles. Además, cuenta con un diseño atractivo y funcional que facilita al usuario encontrar el celular deseado, mediante:
+  * Un filtro de búsqueda.
+  * Filtros por características específicas como marca o capacidad de almacenamiento.
 
 ## Cambios realizados para la entrega final 📃
 
-* **Estructura 🧱 final de la web. 🌐**
-  * Aplicando la legibilidad, la adaptación al framework, el uso de etiquetas y prácticas de SEO.
-  * **Formato:** Archivos HTML.
+* **Estructura final del sitio web 🧱**
+  * Mejoras en la legibilidad del código y su adaptación al framework utilizado.
+  * Implementación de etiquetas semánticas y prácticas de SEO para optimizar el posicionamiento en buscadores.
+  * **Formato:** Archivos en HTML.
 
-* **Estilo 🎨 final de la web. 🌐**
-  * Aplicando los criterios trabajados respecto a estructura visual, diseño atractivo y responsive 📱 💻.
-  * **Formato:** Archivos CSS + SASS o SCSS.
+* **Estilo final del sitio web 🎨**
+  * Aplicación de principios de diseño visual atractivo y responsive, garantizando compatibilidad en dispositivos móviles y de escritorio.
+  * **Formato:** Archivos CSS y SASS/SCSS.
 
-* **Subida al servidor. 🚀**
-  * Utilizando WebHost000.
-  * **Formato:** Link al sitio web cargado en el servidor (se encuentra en el apartado "Visualización de West Celular" segunda linea).
+* **Subida al servidor 🚀**
+  * Implementación en WebHost000.
+  * **Formato:** Enlace al sitio web cargado en el servidor (ver en el apartado "Visualización de West Celular", segunda línea).
 
-## Cambios generales del proyecto 📄
-
-* Agregación de envió de formulario.php
-* Agregación de Sweet Alerts 2 en el archivo contacto.html como ❌ validación ✔ del formulario y en celulares.html como notificaciones ❗.
-* Modal 'ver mas' en celulares.hml, aporta mas imágenes y especificaciones del celular.
-* Corrección del scroll 🖲 automático del index.html (las animaciones de AOS hacia que no quede bien posicionado).
-* Boton de subir 🔼 en celulares.html (cuando se baja en un determinado momento aparecerá el boton)
-* Reducción de tamaños de imágenes, cambio de formato a .webp para comprimir aun mas el peso de las imágenes.
+## Mejoras generales del proyecto 📄
+* **Formulario de contacto:**
+  * Se agregó un archivo formulario.php para gestionar el envío de consultas.
+  * Validación de campos en contacto.html.
+* **Catálogo de celulares:**
+  * Notificaciones implementadas con Sweet Alert 2.
+  * Modal "Ver más" en celulares.html, que permite visualizar más imágenes y detalles técnicos de cada celular.
+  * Optimización de la navegación con un botón de "subir" que aparece al desplazarse hacia abajo.
+* **Efectos y animaciones:**
+  * Corrección del desplazamiento automático en index.html, asegurando la correcta posición tras usar animaciones de AOS.
+* **Optimización de imágenes:**
+  * Reducción de tamaño y conversión de imágenes al formato .webp, mejorando la velocidad de carga del sitio.
 
 ## Visualización de West Celular 🌐 
 
@@ -47,7 +57,7 @@ _Una vez finalice el comando se le creara una carpeta donde contiene todo el rep
 
 ## Autor ✒️
 
-* **Brandon Eliel Pared** - *Desarrollador Web* - [iElielP](https://github.com/iElielP)
+* **PARED BRANDON ELIEL** - *Desarrollador Web* - [iElielP](https://github.com/iElielP)
 
 <h4 align="center">
 🏁 Proyecto Finalizado 🏁
