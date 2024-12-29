@@ -11,7 +11,7 @@ Contendrá un **inicio** donde se explicara como trabajamos en **West Celular**.
   * **Formato:** Archivos HTML.
 
 * **Estilo 🎨 final de la web. 🌐**
-  * Aplicando los criterios trabajados respecto a estructura visual, diseño atractivo y responsive 📱 💻, y reciclado de código.
+  * Aplicando los criterios trabajados respecto a estructura visual, diseño atractivo y responsive 📱 💻.
   * **Formato:** Archivos CSS + SASS o SCSS.
 
 * **Subida al servidor. 🚀**
